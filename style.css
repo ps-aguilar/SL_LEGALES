@@ -5,13 +5,53 @@
 /* 1. Selectores generales */
 body {
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
+
 
 header {
-    background: rgba(18, 13, 70, 0.5); /* color #120D46 con opacidad 0.5 */
+    background: rgba(18, 13, 70, 0.2); /* color #120D46 con opacidad 0.5 */
     color: #AD7B1D;
+    max-width: 100vw;
+    height: 8vh; /* Más alto que el top-bar */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    padding: 0 2vw; /* Espaciado lateral */
 }
 
+.navbar {
+    width: 100%; /* La barra ocupa todo el espacio */
+    display: flex;
+    justify-content: space-between; /* Separa el logo del menú */
+    align-items: center;
+    
+}
+
+.logo img {
+    height: 12vh; /* Ajusta el tamaño del logo en función del viewport */
+    max-width: auto; /* Mantiene la proporción */
+}
+
+
+.nav-links {
+    display: flex; /* Organiza los enlaces en línea */
+    gap: 2vw; /* Espacio entre los enlaces */
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #AD7B1D;
+    font-size: 1rem;
+}
+
+.search-icon {
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
 
 main {
     background: white;
@@ -29,13 +69,120 @@ footer {
 .top-bar {
     background: black;
     color: white;
+    max-width: 100vw;
+    height: 5vh; /* Altura relativa al viewport */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Separa el texto e íconos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 2vw; /* Espaciado lateral relativo */
+    font-size: 1rem; /* Tamaño de letra ajustable */
+
 }
 
+
 .hero{
-    background: url(/Img/original/Foto_Principal.jpg);
+    background: url(Img/original/Foto_Principal.jpg);
     background-color: #58568D;
+    background-size: cover; /* Ajusta la imagen para que cubra toda la sección sin distorsión */
+    background-position: center; /* Centra la imagen */
+
     color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna (uno debajo del otro) */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: center; /* Centra verticalmente */
+    height: 95vh; /* Ajusta la altura */
+    padding: 5vh 10vw; /* Espaciado relativo */
 }
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1vh;
+    max-width: 40vw; /* Controla el ancho del texto */
+    padding-top: 10vh; /* Añade espacio arriba */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    max-width: 30vw;
+    text-align: justify;
+}
+
+.hero button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em; /* Reduce la separación entre texto e ícono */
+    background: transparent;
+    border: .2em solid white; /* Hace el borde más delgado */
+    border-radius: .2rem; /* Hace las esquinas más redondeadas */
+    color: white;
+    padding: .5em 2em; /* Reduce aún más el tamaño del botón */
+    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero button i {
+    font-size: 1rem; /* Reduce el tamaño del icono */
+    align-items: center;
+    justify-content: center;
+    margin-top: .3em; /* Ajusta la posición del ícono */
+}
+
+
+.hero button:hover {
+    background: white;
+    color: #58568D;
+}
+
+.introduction {
+    text-align: center; 
+    padding: 5vh 10vw; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2vh; 
+}
+
+.introduction h2 {
+    margin-bottom: 1vh;
+}
+
+.introduction p {
+    max-width: 800px; 
+    margin: 0 auto; 
+    line-height: 1.5; 
+}
+
+.diferenciadores {
+    display: flex;
+    justify-content: center; 
+    gap: 3vw; 
+    flex-wrap: wrap; 
+    margin-top: 3vh;
+}
+
+.diferenciador {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 250px; 
+    text-align: center;
+}
+
+.diferenciador h3 {
+    margin-top: 1vh;
+}
+
+.diferenciador p {
+    max-width: 200px;
+}
+
+
 
 .about_us {
     background: #58568D;
@@ -59,7 +206,15 @@ footer {
 
 .social-icons {
     color: white;
+    display: flex; /* Organiza los íconos en fila */
+    gap: 1rem; /* Espaciado entre íconos */
 
+}
+
+.social-icons a {
+    font-size: 1.2rem; /* Tamaño de los íconos */
+    color: white; /* Asegura que sean visibles */
+    text-decoration: none; /* Elimina el subrayado */
 }
 
 .reviews{
@@ -102,7 +257,7 @@ p {
 
 a {
     font-family: Fira Sans;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1em;
     color: #AD7B1D;
 }
@@ -111,3 +266,25 @@ a:hover {
     color: #A61C2C;
 }
 
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em; /* Reduce la separación entre texto e ícono */
+    background: transparent;
+    border: .2em solid white; /* Hace el borde más delgado */
+    border-radius: .2rem; /* Hace las esquinas más redondeadas */
+    color: white;
+    padding: .5em 2em; /* Reduce aún más el tamaño del botón */
+    font-size: .8em; /* Reduce el tamaño del texto */
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero button:hover {
+    background: white;
+    color: #58568D;
+}
