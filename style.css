@@ -228,10 +228,23 @@ hero button i {
     color: white;
 }
 
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 2rem; 
+    justify-items: center; 
+    align-items: center;
+    padding: 5vh 10vw; 
+}
+
 .services {
     background: #2a2657;
     color: white;
+    text-align: center;
+    padding-top: 5vh;
 }
+
 
 .values {
     background: #58568D;
