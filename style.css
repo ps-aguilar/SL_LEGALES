@@ -70,12 +70,12 @@ footer {
     background: black;
     color: white;
     max-width: 100vw;
-    height: 5vh; /* Altura relativa al viewport */
-    display: flex; /* Usa flexbox para organizar los elementos */
-    justify-content: space-between; /* Separa el texto e íconos */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 0 2vw; /* Espaciado lateral relativo */
-    font-size: 1rem; /* Tamaño de letra ajustable */
+    height: 5vh; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 2vw; 
+    font-size: 1rem; 
 
 }
 
@@ -83,22 +83,22 @@ footer {
 .hero{
     background: url(Img/original/Foto_Principal.jpg);
     background-color: #58568D;
-    background-size: cover; /* Ajusta la imagen para que cubra toda la sección sin distorsión */
-    background-position: center; /* Centra la imagen */
+    background-size: cover; 
+    background-position: center; 
 
     color: white;
     display: flex;
-    flex-direction: column; /* Organiza los elementos en columna (uno debajo del otro) */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    justify-content: center; /* Centra verticalmente */
-    height: 60vh; /* Ajusta la altura */
-    padding: 5vh 10vw; /* Espaciado relativo */
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+    height: 60vh; 
+    padding: 5vh 10vw; 
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1vh;
-    max-width: 40vw; /* Controla el ancho del texto */
+    max-width: 40vw; 
 }
 
 .hero p {
@@ -111,18 +111,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px; /* Reduce la separación entre texto e ícono */
+    gap: 2px; 
     background: transparent;
-    border: 0.8px solid white; /* Hace el borde más delgado */
+    border: 0.8px solid white; 
     color: white;
-    padding: 2px 5px; /* Reduce aún más el tamaño del botón */
-    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    padding: 2px 5px; 
+    font-size: 0.5rem; 
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 hero button i {
-    font-size: 0.6rem; /* Reduce el tamaño del icono */
+    font-size: 0.6rem; 
 }
 
 
@@ -175,8 +175,57 @@ hero button i {
 }
 
 .about_us {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 8vh 5vw;
     background: #58568D;
     color: black;
+    gap: 5vw; 
+}
+
+.about_us-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    max-width: 40rem;
+    gap: 1rem; 
+}
+
+.about_us img {
+    max-width: 40rem;
+    height: auto;
+    border-radius: 3px;
+}
+
+.about_us-text {
+    width: 45%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    gap: 1vh; 
+}
+
+.about_us-text p {
+    line-height: 1.5;
+}
+
+.about_us button {
+    padding: 8px 18px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.about_us button:hover {
+    background-color: black;
+    color: white;
 }
 
 .services {
@@ -196,15 +245,15 @@ hero button i {
 
 .social-icons {
     color: white;
-    display: flex; /* Organiza los íconos en fila */
-    gap: 1rem; /* Espaciado entre íconos */
+    display: flex; 
+    gap: 1rem; 
 
 }
 
 .social-icons a {
-    font-size: 1.2rem; /* Tamaño de los íconos */
-    color: white; /* Asegura que sean visibles */
-    text-decoration: none; /* Elimina el subrayado */
+    font-size: 1.2rem; 
+    color: white; 
+    text-decoration: none; 
 }
 
 .reviews{
