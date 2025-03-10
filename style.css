@@ -1,0 +1,113 @@
+/* Importando fuentes Libre Bodoni para destacados y Fira Sans para texto general */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* 1. Selectores generales */
+body {
+    font-size: 16px;
+}
+
+header {
+    background: rgba(18, 13, 70, 0.5); /* color #120D46 con opacidad 0.5 */
+    color: #AD7B1D;
+}
+
+
+main {
+    background: white;
+    color: black;
+
+}
+
+footer {
+    background: black;
+    color: white;
+
+}
+
+/* 2. Secciones principales */
+.top-bar {
+    background: black;
+    color: white;
+}
+
+.hero{
+    background: url(/Img/original/Foto_Principal.jpg);
+    background-color: #58568D;
+    color: white;
+}
+
+.about_us {
+    background: #58568D;
+    color: black;
+}
+
+.services {
+    background: #2a2657;
+    color: white;
+}
+
+.values {
+    background: #58568D;
+    color: black;
+}
+
+.team {
+    background: #2a2657;
+    color: white;
+}
+
+.social-icons {
+    color: white;
+
+}
+
+.reviews{
+    background: white;
+    color: black;
+}
+
+/* 3. Tamanos de letra generales */
+
+h1 {
+    font-family: Libre Bodoni;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: Libre Bodoni;
+    font-weight: 500;
+    font-size: 2em;
+
+}
+
+h3 {
+    font-family: Fira Sans;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-family: Fira Sans;
+    font-weight: 400;
+    font-size: 1.24em;
+}
+
+p {
+    font-family: Fira Sans;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+a {
+    font-family: Fira Sans;
+    font-weight: 300;
+    font-size: 1em;
+    color: #AD7B1D;
+}
+
+a:hover {
+    color: #A61C2C;
+}
+
