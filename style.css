@@ -5,13 +5,53 @@
 /* 1. Selectores generales */
 body {
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
+
 
 header {
     background: rgba(18, 13, 70, 0.5); /* color #120D46 con opacidad 0.5 */
     color: #AD7B1D;
+    max-width: 100vw;
+    height: 8vh; /* Más alto que el top-bar */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    padding: 0 2vw; /* Espaciado lateral */
 }
 
+.navbar {
+    width: 100%; /* La barra ocupa todo el espacio */
+    display: flex;
+    justify-content: space-between; /* Separa el logo del menú */
+    align-items: center;
+    
+}
+
+.logo img {
+    height: 12vh; /* Ajusta el tamaño del logo en función del viewport */
+    max-width: auto; /* Mantiene la proporción */
+}
+
+
+.nav-links {
+    display: flex; /* Organiza los enlaces en línea */
+    gap: 2vw; /* Espacio entre los enlaces */
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #AD7B1D;
+    font-size: 1rem;
+}
+
+.search-icon {
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
 
 main {
     background: white;
@@ -29,7 +69,16 @@ footer {
 .top-bar {
     background: black;
     color: white;
+    max-width: 100vw;
+    height: 5vh; /* Altura relativa al viewport */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Separa el texto e íconos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 2vw; /* Espaciado lateral relativo */
+    font-size: 1rem; /* Tamaño de letra ajustable */
+
 }
+
 
 .hero{
     background: url(/Img/original/Foto_Principal.jpg);
@@ -59,7 +108,15 @@ footer {
 
 .social-icons {
     color: white;
+    display: flex; /* Organiza los íconos en fila */
+    gap: 1rem; /* Espaciado entre íconos */
 
+}
+
+.social-icons a {
+    font-size: 1.2rem; /* Tamaño de los íconos */
+    color: white; /* Asegura que sean visibles */
+    text-decoration: none; /* Elimina el subrayado */
 }
 
 .reviews{
