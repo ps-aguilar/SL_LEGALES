@@ -131,6 +131,49 @@ hero button i {
     color: #58568D;
 }
 
+.introduction {
+    text-align: center; 
+    padding: 5vh 10vw; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2vh; 
+}
+
+.introduction h2 {
+    margin-bottom: 1vh;
+}
+
+.introduction p {
+    max-width: 800px; 
+    margin: 0 auto; 
+    line-height: 1.5; 
+}
+
+.diferenciadores {
+    display: flex;
+    justify-content: center; 
+    gap: 3vw; 
+    flex-wrap: wrap; 
+    margin-top: 3vh;
+}
+
+.diferenciador {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 250px; 
+    text-align: center;
+}
+
+.diferenciador h3 {
+    margin-top: 1vh;
+}
+
+.diferenciador p {
+    max-width: 200px;
+}
+
 .about_us {
     background: #58568D;
     color: black;
