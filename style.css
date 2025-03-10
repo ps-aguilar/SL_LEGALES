@@ -81,9 +81,54 @@ footer {
 
 
 .hero{
-    background: url(/Img/original/Foto_Principal.jpg);
+    background: url(Img/original/Foto_Principal.jpg);
     background-color: #58568D;
+    background-size: cover; /* Ajusta la imagen para que cubra toda la sección sin distorsión */
+    background-position: center; /* Centra la imagen */
+
     color: white;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna (uno debajo del otro) */
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    justify-content: center; /* Centra verticalmente */
+    height: 60vh; /* Ajusta la altura */
+    padding: 5vh 10vw; /* Espaciado relativo */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1vh;
+    max-width: 40vw; /* Controla el ancho del texto */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    max-width: 40vw;
+}
+
+.hero button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; /* Reduce la separación entre texto e ícono */
+    background: transparent;
+    border: 0.8px solid white; /* Hace el borde más delgado */
+    color: white;
+    padding: 2px 5px; /* Reduce aún más el tamaño del botón */
+    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+hero button i {
+    font-size: 0.6rem; /* Reduce el tamaño del icono */
+}
+
+
+.hero button:hover {
+    background: white;
+    color: #58568D;
 }
 
 .about_us {
