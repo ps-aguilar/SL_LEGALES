@@ -62,8 +62,60 @@ main {
 footer {
     background: black;
     color: white;
-
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
 }
+
+/* Contenedor de las columnas */
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    max-width: 90%;
+}
+
+/* Columnas individuales */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    flex: 1; /* Distribuye el espacio equitativamente */
+}
+
+/* Ajuste del logo */
+.logo-container {
+    align-items: center;
+    text-align: center;
+}
+
+.footer-links img {
+    height: 15vh;
+    max-width: auto;
+}
+
+/* Footer final con derechos de autor y redes sociales */
+.footer-links-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 1vh 2vw;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1vw; /* Espacio entre iconos */
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em; /* Tamaño de los iconos */
+}
+
 
 /* 2. Secciones principales */
 .top-bar {
@@ -74,7 +126,7 @@ footer {
     display: flex; /* Usa flexbox para organizar los elementos */
     justify-content: space-between; /* Separa el texto e íconos */
     align-items: center; /* Centra los elementos verticalmente */
-    padding: 0 2vw; /* Espaciado lateral relativo */
+    padding: 0 8vw; /* Espaciado lateral relativo */
     font-size: 1rem; /* Tamaño de letra ajustable */
 
 }
@@ -188,9 +240,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8vh 5vw;
+    padding: 6vh 4vw;
     background: #58568D;
-    color: black;
+    color: white;
     gap: 5vw;
     max-width: 80vw;
     margin: 0 auto;
@@ -209,7 +261,7 @@ footer {
     align-items: center;  /* Centra el contenido horizontalmente */
     justify-content: center;  /* Centra el contenido verticalmente */
     text-align: center;  /* Centra el texto */
-    gap: 1rem;
+    gap: .5rem;
     max-width: 40rem;
 }
 
@@ -228,6 +280,11 @@ footer {
     gap: 1vh;
 }
 
+.about_us p{
+    text-align: justify;
+}
+
+/*
 .about_us button {
     padding: 8px 18px;
     font-size: 1rem;
@@ -241,7 +298,7 @@ footer {
 .about_us button:hover {
     background-color: black;
     color: white;
-}
+}*/
 
 
 /* Servicios */
@@ -262,6 +319,14 @@ footer {
     padding-top: 5vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
+
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 
@@ -270,9 +335,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8vh 5vw;
+    padding: 4vh 4vw;
     background: #58568D;
-    color: black;
+    color: white;
     gap: 5vw;
     max-width: 80vw;
     margin: 0 auto;
@@ -301,6 +366,7 @@ footer {
 .values p {
     max-width: 40rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Contenedor de la imagen */
@@ -414,9 +480,6 @@ footer {
     z-index: 1;
 }
 
-
-
-
 .social-icons {
     color: white;
     display: flex; /* Organiza los íconos en fila */
@@ -430,10 +493,99 @@ footer {
     text-decoration: none; /* Elimina el subrayado */
 }
 
-.reviews{
+.reviews {
     background: white;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 5vw;
+    max-width: 80vw;
+    margin: 5vh auto;
 }
+
+.reviews-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 30vw;
+}
+
+.reviews button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #AD7B1D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.reviews button:hover {
+    background: #8A5E17;
+    transform: scale(1.05);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.review:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.review-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.review-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.review-content .location {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.review-content p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
 
 /* 3. Tamanos de letra generales */
 
@@ -472,7 +624,7 @@ a {
     font-family: Fira Sans;
     font-weight: 400;
     font-size: 1em;
-    color: #AD7B1D;
+    color: #ae7c1e;
 }
 
 a:hover {
@@ -497,7 +649,7 @@ button {
     transition: all 0.3s ease-in-out;
 }
 
-.hero button:hover {
+button:hover {
     background: white;
     color: #58568D;
 }
