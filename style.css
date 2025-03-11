@@ -12,7 +12,7 @@ body {
 
 
 header {
-    background: rgba(18, 13, 70, 0.2); /* color #120D46 con opacidad 0.5 */
+    background: rgba(41, 41, 41, 0.2);
     color: #AD7B1D;
     max-width: 100vw;
     height: 8vh; /* Más alto que el top-bar */
@@ -134,7 +134,7 @@ footer {
 
 .hero{
     background: url(Img/original/Foto_Principal.jpg);
-    background-color: #58568D;
+    background-color: #6C6C7A;
     background-size: cover; /* Ajusta la imagen para que cubra toda la sección sin distorsión */
     background-position: center; /* Centra la imagen */
 
@@ -241,7 +241,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 6vh 4vw;
-    background: #58568D;
+    background: #363D57;
     color: white;
     gap: 5vw;
     max-width: 80vw;
@@ -313,7 +313,7 @@ footer {
 }
 
 .services {
-    background: #2a2657;
+    background: #13162E;
     color: white;
     text-align: center;
     padding-top: 5vh;
@@ -336,7 +336,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 4vh 4vw;
-    background: #58568D;
+    background: #363D57;
     color: white;
     gap: 5vw;
     max-width: 80vw;
@@ -387,7 +387,7 @@ footer {
 
 /* Fuerza Laboral */
 .team {
-    background: #2a2657;
+    background: #13162E;
     color: white;
     height: 90vh;
     margin-top: 5vh;
