@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Servicios - SLCORP</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 
     <style>
 
@@ -22,12 +22,14 @@
         }
 
         .card-container {
+            justify-content: center;
+            align-items: center;
+            margin: 2rem auto;
             width: 100%;
             max-width: 280px;
             height: 280px;
             perspective: 1000px;
             display: flex;
-            align-items: stretch; 
         }
 
         .card {
@@ -68,6 +70,11 @@
             background-color: #6C6D70;
             color: white;
             transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.5rem;
+            text-align: justify;
         }
 
         .front img {
@@ -78,13 +85,19 @@
         }
 
         .front h3 {
-            font-size: 14px;
-            margin: 0;
+            font-size: 1.2rem;  
+            font-weight: 600;  
+            text-align: center; 
+            color: white; 
+            margin: 10px 0; 
+            letter-spacing: 0.5px; 
         }
 
         .back p {
-            font-size: 13px;
+            font-size: 12px;
             margin: 0 0 12px;
+            line-height: 1.5;
+            flex-grow: 1;
         }
 
         .btn-interesa {
@@ -142,7 +155,7 @@
     <main class="servicios-main">
         <section class="servicios-header">
             <h1>Servicios</h1>
-            <p>Los servicios que brindamos tiene un carácter ambivalente: preventivo y correctivo, ya que es tan importante solucionar conflictos existentes, como prever y prepararse para el futuro e incluso evitarlos.</p>
+            <p>Los servicios que ofrecemos tienen un enfoque dual: preventivo y correctivo. No solo nos especializamos en la resolución de conflictos existentes, sino que también trabajamos para anticiparlos, mitigar riesgos y brindar estrategias que permitan a nuestros clientes prepararse para el futuro con seguridad y confianza.</p>
         </section>
     
         <section class="servicios-lista">
@@ -151,11 +164,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen1.jpg" alt="Defensa y Litigio">
-                        <h3>Defensa y Litigio</h3>
+                        <img src="imagen1.jpg" alt="Auditoría Financiera y Control Interno">
+                        <h3>Auditoría Financiera y Control Interno</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 1.</p>
+                        <p>Realizamos un análisis integral de los procesos administrativos para mejorar la eficiencia operativa. Asesoramos en la implementación de manuales de procedimientos y políticas internas, además de apoyar en la adopción de sistemas de gestión de calidad, prevención de riesgos y normativas ambientales, garantizando el cumplimiento y optimización de los recursos empresariales.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -164,11 +177,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen2.jpg" alt="Asesoría Fiscal">
-                        <h3>Asesoría Fiscal</h3>
+                        <img src="imagen2.jpg" alt="Defensa Fiscal y Administrativa">
+                        <h3>Defensa Fiscal y Administrativa</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 2.</p>
+                        <p>Brindamos defensa legal especializada ante sanciones y resoluciones del SAT y otras entidades fiscalizadoras, como CONAGUA, PROFECO, PROFEPA, STyPS, entre otras. Gestionamos recursos administrativos, juicios contenciosos y amparos, protegiendo los intereses de nuestros clientes y garantizando un respaldo jurídico sólido ante procedimientos administrativos y fiscales.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -177,11 +190,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen3.jpg" alt="Consultoría Corporativa">
-                        <h3>Consultoría Corporativa</h3>
+                        <img src="imagen3.jpg" alt="Servicios Contables y Fiscales">
+                        <h3>Servicios Contables y Fiscales</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 3.</p>
+                        <p>Asesoramos y gestionamos el cumplimiento de obligaciones fiscales y contables para personas físicas y empresas. Atendemos auditorías fiscales, realizamos registros contables, declaraciones, inscripción ante el IMSS y análisis de operaciones para mitigar riesgos. Además, brindamos asesoría en prevención de lavado de dinero y cumplimiento normativo, garantizando estrategias eficientes y seguras.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -190,11 +203,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen4.jpg" alt="Cumplimiento Regulatorio">
-                        <h3>Cumplimiento Regulatorio</h3>
+                        <img src="imagen4.jpg" alt="Empresas Familiares">
+                        <h3>Empresas Familiares</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 4.</p>
+                        <p>Brindamos asesoría especializada en la gestión y participación de los miembros de empresas familiares, asegurando un adecuado control del patrimonio empresarial. Orientamos en la toma de decisiones estratégicas para optimizar la distribución de beneficios y garantizar la continuidad del negocio.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -203,11 +216,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen5.jpg" alt="Auditoría Legal">
-                        <h3>Auditoría Legal</h3>
+                        <img src="imagen5.jpg" alt="Productividad Fiscal">
+                        <h3>Productividad Fiscal</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 5.</p>
+                        <p>Optimizamos estructuras fiscales para reducir el impacto tributario, aplicando estrategias dentro del marco legal nacional e internacional. Brindamos asesoría a empresas para minimizar costos en seguridad social e INFONAVIT, garantizando un cumplimiento eficiente y rentable.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -216,11 +229,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen6.jpg" alt="Contratos Comerciales">
-                        <h3>Contratos Comerciales</h3>
+                        <img src="imagen6.jpg" alt="Consultoría Fiscal y Financiera">
+                        <h3>Consultoría Fiscal y Financiera</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 6.</p>
+                        <p>Brindamos asesoría especializada en la interpretación y aplicación de normativas fiscales y tratados internacionales, asegurando que las operaciones comerciales de nuestros clientes cumplan con el marco legal y optimicen su rentabilidad.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -229,11 +242,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen7.jpg" alt="Propiedad Intelectual">
-                        <h3>Propiedad Intelectual</h3>
+                        <img src="imagen7.jpg" alt="Compliance Empresarial">
+                        <h3>Compliance Empresarial</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 7.</p>
+                        <p>Ofrecemos asesoría estratégica para el diseño e implementación de modelos normativos de prevención y gestión empresarial. Nuestro enfoque busca fortalecer la transparencia, minimizar riesgos legales y aumentar el valor de las operaciones comerciales de cada cliente.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -242,11 +255,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen8.jpg" alt="Derecho Laboral">
-                        <h3>Derecho Laboral</h3>
+                        <img src="imagen8.jpg" alt="Servicios Corporativos">
+                        <h3>Servicios Corporativos</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 8.</p>
+                        <p>Brindamos asesoría especializada en la gestión y reestructuración empresarial, incluyendo aumentos y reducciones de capital, fusiones, escisiones y la conformación de holdings y grupos corporativos. Facilitamos estrategias para optimizar la estructura legal y operativa de las empresas.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -255,11 +268,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen9.jpg" alt="Derecho Ambiental">
-                        <h3>Derecho Ambiental</h3>
+                        <img src="imagen9.jpg" alt="Litigio Laboral">
+                        <h3>Litigio Laboral</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 9.</p>
+                        <p>Ofrecemos asesoría y estrategias en la gestión de recursos humanos, garantizando el cumplimiento normativo y la correcta administración laboral. Además, brindamos defensa legal mediante representación y mediación en conflictos laborales ante las instancias correspondientes.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -268,11 +281,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen10.jpg" alt="Planeación Fiscal">
-                        <h3>Planeación Fiscal</h3>
+                        <img src="imagen10.jpg" alt="Litigio en Seguridad Social">
+                        <h3>Litigio en Seguridad Social</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 10.</p>
+                        <p>Brindamos asesoría y defensa legal en contribuciones sociales, abordando impuestos sobre nómina, integración salarial y cuotas al IMSS e INFONAVIT. También gestionamos la clasificación empresarial y la revisión anual de siniestralidad para optimizar la prima del seguro de riesgos de trabajo.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -281,11 +294,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen11.jpg" alt="Derecho Penal Empresarial">
-                        <h3>Derecho Penal Empresarial</h3>
+                        <img src="imagen11.jpg" alt="Litigio Mercantil">
+                        <h3>Litigio Mercantil</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 11.</p>
+                        <p>En SL CORP representamos a empresarios en Juicios Orales, Ejecutivos y Ordinarios Mercantiles. Además, ofrecemos redacción y negociación de contratos mercantiles y títulos de crédito, garantizando seguridad y respaldo legal en cada operación comercial.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -294,11 +307,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen12.jpg" alt="Litigio Administrativo">
-                        <h3>Litigio Administrativo</h3>
+                        <img src="imagen12.jpg" alt="Litigio en Comercio Exterior y Aduanas">
+                        <h3>Litigio en Comercio Exterior y Aduanas</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 12.</p>
+                        <p>Asesoramos a inversionistas nacionales y extranjeros en procedimientos antidumping, cuotas compensatorias y cumplimiento de regulaciones arancelarias y no arancelarias. Además, brindamos representación legal en litigios aduaneros y apoyo en clasificación arancelaria para garantizar el cumplimiento normativo en el comercio internacional.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -307,11 +320,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen13.jpg" alt="Protección de Datos">
-                        <h3>Protección de Datos</h3>
+                        <img src="imagen13.jpg" alt="Derecho Societario">
+                        <h3>Derecho Societario</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 13.</p>
+                        <p>Brindamos asesoría en la estructuración y gestión de sociedades, incluyendo la elaboración y protocolización de Actas de Asamblea, actos traslativos de dominio, constitución, disolución y liquidación de sociedades. Además, ofrecemos servicios de emisión de copias certificadas, otorgamiento de poderes de representación legal y fe de hechos, garantizando la correcta formalización y cumplimiento normativo de las empresas.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -320,11 +333,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen14.jpg" alt="Fusiones y Adquisiciones">
-                        <h3>Fusiones y Adquisiciones</h3>
+                        <img src="imagen14.jpg" alt="Amparo contra Leyes">
+                        <h3>Amparo contra Leyes</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 14.</p>
+                        <p>Brindamos asesoría y representación en juicios de amparo contra leyes, reglamentos o tratados que vulneren derechos constitucionales. Nos encargamos del análisis normativo, la estrategia legal y la presentación del caso ante los Tribunales de la Federación, asegurando la defensa de los intereses de nuestros clientes.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>
@@ -333,11 +346,11 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen15.jpg" alt="Asesoría Financiera">
-                        <h3>Asesoría Financiera</h3>
+                        <img src="imagen15.jpg" alt="Asesoría de Negocios y Financiamiento">
+                        <h3>Asesoría de Negocios y Financiamiento</h3>
                     </div>
                     <div class="back">
-                        <p>Descripción breve del servicio 15.</p>
+                        <p>Brindamos orientación estratégica en la obtención de financiamientos para capital de trabajo e inversión. Además, asesoramos en la reestructuración de pasivos financieros, optimizando los recursos y fortaleciendo la estabilidad económica de nuestros clientes.</p>
                         <button class="btn-interesa">Me interesa</button>
                     </div>
                 </div>

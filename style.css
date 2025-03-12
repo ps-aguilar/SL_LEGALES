@@ -407,3 +407,31 @@ a:hover {
     color: #A61C2C;
 }
 
+/*SERVICES STYLES*/
+
+.servicios-header {
+    color: black;
+    text-align: center;
+    padding: 3vh 5vw; 
+    max-width: 80vw;
+    margin: 5vh auto;
+}
+
+.servicios-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.servicios-header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 800vw;
+    margin: 0 auto; 
+    line-height: 1.6;
+}
+
+
+
