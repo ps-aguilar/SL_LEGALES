@@ -132,26 +132,27 @@ footer {
 }
 
 
-.hero{
-    background: url(Img/original/Foto_Principal.jpg);
+.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%),
+                url(Img/original/Foto_Principal.jpg);
     background-color: #6C6C7A;
-    background-size: cover; /* Ajusta la imagen para que cubra toda la sección sin distorsión */
-    background-position: center; /* Centra la imagen */
-
+    background-size: cover;
+    background-position: center;
     color: white;
     display: flex;
-    flex-direction: column; /* Organiza los elementos en columna (uno debajo del otro) */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    justify-content: center; /* Centra verticalmente */
-    height: 95vh; /* Ajusta la altura */
-    padding: 5vh 10vw; /* Espaciado relativo */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 95vh;
+    padding: 5vh 10vw;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 1vh;
-    max-width: 40vw; /* Controla el ancho del texto */
-    padding-top: 10vh; /* Añade espacio arriba */
+    max-width: 40vw;
+    padding-top: 10vh;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
 
 .hero p {
@@ -159,6 +160,7 @@ footer {
     margin-bottom: 2vh;
     max-width: 30vw;
     text-align: justify;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero button {
