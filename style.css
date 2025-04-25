@@ -723,29 +723,33 @@ footer {
 /*====================================
 =              DIFERENCIADORES       =
 ====================================*/
+
+/* Contenedor de diferenciadores */
 .diferenciadores {
     display: flex;
-    justify-content: center; 
-    gap: 3vw; 
-    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
     margin-top: 3vh;
-}
-
-.diferenciador {
+  }
+  
+  /* Tarjeta individual */
+  .diferenciador {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    max-width: 250px; 
+    align-items: center;
+    max-width: 250px;
     text-align: center;
-}
-
-.diferenciador h3 {
+  }
+  
+  .diferenciador h3 {
     margin-top: 1vh;
-}
-
-.diferenciador p {
+  }
+  
+  .diferenciador p {
     max-width: 200px;
-}
+  }
+  
 
 
 
