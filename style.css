@@ -7,7 +7,7 @@
 =========================================*/
 /* Estilo base del body */
 body {
-    font-size: 1rem; /* Tamaño base escalable */
+    font-size: 1rem; 
     margin: 0;
     padding: 0;
     width: 100%;
@@ -93,11 +93,11 @@ body {
     background: black;
     color: white;
     max-width: 100vw;
-    height: 5vh; /* Altura relativa al viewport */
-    display: flex; /* Flexbox para organizar elementos */
-    justify-content: space-between; /* Separación entre elementos */
-    align-items: center; /* Centrado vertical */
-    padding: 0 8vw; /* Espaciado lateral relativo */
+    height: 5vh; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 8vw; 
     font-size: 1rem;
   }
   
@@ -106,10 +106,10 @@ body {
 ====================================*/
 /* Encabezado principal */
 header {
-    background: rgba(41, 41, 41, 0.2); /* Fondo semitransparente */
-    color: #AD7B1D; /* Color de texto corporativo */
+    background: rgba(41, 41, 41, 0.2); 
+    color: #AD7B1D; 
     max-width: 100vw;
-    height: 8vh; /* Altura relativa al viewport */
+    height: 8vh; 
     display: flex;
     align-items: center;
     padding: 0 2vw;
@@ -119,20 +119,20 @@ header {
   .navbar {
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    justify-content: space-between; 
     align-items: center;
   }
   
   /* Logo */
   .logo img {
-    height: 12vh; /* Escala adaptable */
+    height: 12vh; 
     max-width: 100%;
   }
   
   /* Lista de enlaces */
   .nav-links {
     display: flex;
-    gap: 2vw; /* Espaciado entre enlaces */
+    gap: 2vw; 
     list-style: none;
     margin: 0;
     padding: 0;
@@ -143,12 +143,12 @@ header {
     text-decoration: none;
     color: #AD7B1D;
     font-size: 1rem;
-    position: relative; /* Para subrayado animado */
+    position: relative; 
   }
   
   /* Hover de los enlaces */
   .nav-links a:hover {
-    color: #A61C2C; /* Cambio de color elegante */
+    color: #A61C2C; 
   }
   
   /* Subrayado animado */
@@ -270,10 +270,39 @@ header {
     line-height: 1.5;
   }
 
+  /*====================================
+=              DIFERENCIADORES       =
+====================================*/
+
+/* Contenedor de diferenciadores */
+.diferenciadores {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+  }
+  
+  /* Tarjeta individual */
+  .diferenciador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    text-align: center;
+  }
+  
+  .diferenciador h3 {
+    margin-top: 1vh;
+  }
+  
+  .diferenciador p {
+    max-width: 200px;
+  }
+
 /*====================================
 =             ABOUT US               =
 ====================================*/
-
 .about_us {
     display: flex;
     align-items: center;
@@ -403,7 +432,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Alinea el texto a la izquierda */
+    align-items: flex-start; 
     text-align: left;
     gap: 1rem;
     max-width: 40rem;
@@ -720,36 +749,7 @@ footer {
     padding: 1vh 2vw;
   }
   
-/*====================================
-=              DIFERENCIADORES       =
-====================================*/
 
-/* Contenedor de diferenciadores */
-.diferenciadores {
-    display: flex;
-    justify-content: center;
-    gap: 3vw;
-    flex-wrap: wrap;
-    margin-top: 3vh;
-  }
-  
-  /* Tarjeta individual */
-  .diferenciador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 250px;
-    text-align: center;
-  }
-  
-  .diferenciador h3 {
-    margin-top: 1vh;
-  }
-  
-  .diferenciador p {
-    max-width: 200px;
-  }
-  
 
 
 
