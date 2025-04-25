@@ -3,86 +3,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
 /*=========================================
-=            ESTILOS GENERALES           =
+=            ESTILOS GENERALES            =
 =========================================*/
+
 /* Estilo base del body */
 body {
-    font-size: 1rem;            /* Unidad relativa para escalabilidad */
+    font-size: 1rem; /* Tamaño base escalable */
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-/* Título principal */
-h1 {
+  }
+  
+  /* Títulos principales y secundarios */
+  h1, h2, h3, h4 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  h1 {
     font-family: 'Libre Bodoni', serif;
     font-weight: 700;
-    font-size: 2.5rem;          /* Tamaño relativo del encabezado */
-}
-
-/* Subtítulos */
-h2 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
     font-family: 'Libre Bodoni', serif;
     font-weight: 500;
     font-size: 2rem;
-}
-
-h3 {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 500;
+  }
+  
+  h3 {
     font-size: 1.5rem;
-}
-
-h4 {
-    font-family: 'Fira Sans', sans-serif;
+  }
+  
+  h4 {
     font-weight: 400;
     font-size: 1.25rem;
-}
-
-/* Texto general */
-p {
+  }
+  
+  /* Texto general */
+  p {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300;
     font-size: 1rem;
-}
-
-/* Enlaces */
-a {
+  }
+  
+  /* Enlaces */
+  a {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: #ae7c1e;
-    text-decoration: none;         /* Quita el subrayado por defecto */
-}
-
-a:hover {
+    text-decoration: none;
+  }
+  
+  a:hover {
     color: #A61C2C;
-}
-
-/* Estilo del área principal */
-main {
+  }
+  
+  /* Área principal */
+  main {
     background: white;
     color: black;
-}
-
-/* Iconos de redes sociales */
-.social-icons {
+  }
+  
+  /* Iconos de redes sociales */
+  .social-icons {
     display: flex;
     gap: 1vw;
-}
-
-.social-icons a {
+  }
+  
+  .social-icons a {
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #AD7B1D; /* Cambia al color corporativo dorado al pasar el mouse */
-    transform: scale(1.2); /* Efecto de leve aumento */
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
+  }
+  
+  .social-icons a:hover {
+    color: #AD7B1D;
+    transform: scale(1.2);
+  }
+  
 
 /*====================================
 =         BARRA SUPERIOR (TOP BAR)   =
