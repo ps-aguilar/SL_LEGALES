@@ -7,6 +7,7 @@
 =========================================*/
 /* Estilo base del body */
 body {
+<<<<<<< HEAD
     font-size: 1rem; 
     margin: 0;
     padding: 0;
@@ -63,6 +64,58 @@ body {
   
   /* Área principal */
   main {
+=======
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+header {
+    background: rgba(18, 13, 70, 0.5); /* color #120D46 con opacidad 0.5 */
+    color: #AD7B1D;
+    max-width: 100vw;
+    height: 8vh; /* Más alto que el top-bar */
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    padding: 0 2vw; /* Espaciado lateral */
+}
+
+.navbar {
+    width: 100%; /* La barra ocupa todo el espacio */
+    display: flex;
+    justify-content: space-between; /* Separa el logo del menú */
+    align-items: center;
+    
+}
+
+.logo img {
+    height: 12vh; /* Ajusta el tamaño del logo en función del viewport */
+    max-width: auto; /* Mantiene la proporción */
+}
+
+
+.nav-links {
+    display: flex; /* Organiza los enlaces en línea */
+    gap: 2vw; /* Espacio entre los enlaces */
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #AD7B1D;
+    font-size: 1rem;
+}
+
+.search-icon {
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
+
+main {
+>>>>>>> fac0ee35eefd85aaeecd6abe1e86555c2f91043c
     background: white;
     color: black;
   }
@@ -97,6 +150,7 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+<<<<<<< HEAD
     padding: 0 8vw; 
     font-size: 1rem;
   }
@@ -269,6 +323,107 @@ header {
     margin: 0 auto;
     line-height: 1.5;
   }
+=======
+    padding: 0 2vw; 
+    font-size: 1rem; 
+
+}
+
+
+.hero{
+    background: url(Img/original/Foto_Principal.jpg);
+    background-color: #58568D;
+    background-size: cover; 
+    background-position: center; 
+
+    color: white;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+    height: 60vh; 
+    padding: 5vh 10vw; 
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1vh;
+    max-width: 40vw; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+    max-width: 40vw;
+}
+
+.hero button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px; 
+    background: transparent;
+    border: 0.8px solid white; 
+    color: white;
+    padding: 2px 5px; 
+    font-size: 0.5rem; 
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+hero button i {
+    font-size: 0.6rem; 
+}
+
+
+.hero button:hover {
+    background: white;
+    color: #58568D;
+}
+
+.introduction {
+    text-align: center; 
+    padding: 5vh 10vw; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2vh; 
+}
+
+.introduction h2 {
+    margin-bottom: 1vh;
+}
+
+.introduction p {
+    max-width: 800px; 
+    margin: 0 auto; 
+    line-height: 1.5; 
+}
+
+.diferenciadores {
+    display: flex;
+    justify-content: center; 
+    gap: 3vw; 
+    flex-wrap: wrap; 
+    margin-top: 3vh;
+}
+
+.diferenciador {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 250px; 
+    text-align: center;
+}
+
+.diferenciador h3 {
+    margin-top: 1vh;
+}
+
+.diferenciador p {
+    max-width: 200px;
+}
+>>>>>>> fac0ee35eefd85aaeecd6abe1e86555c2f91043c
 
   /*====================================
 =              DIFERENCIADORES       =
@@ -305,6 +460,7 @@ header {
 ====================================*/
 .about_us {
     display: flex;
+<<<<<<< HEAD
     align-items: center;
     justify-content: center;
     padding: 6vh 4vw;
@@ -413,6 +569,78 @@ header {
 =             MISIÓN Y VISIÓN        =
 ====================================*/
 /* Sección de valores */
+=======
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 8vh 5vw;
+    background: #58568D;
+    color: black;
+    gap: 5vw; 
+}
+
+.about_us-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    max-width: 40rem;
+    gap: 1rem; 
+}
+
+.about_us img {
+    max-width: 40rem;
+    height: auto;
+    border-radius: 3px;
+}
+
+.about_us-text {
+    width: 45%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    gap: 1vh; 
+}
+
+.about_us-text p {
+    line-height: 1.5;
+}
+
+.about_us button {
+    padding: 8px 18px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.about_us button:hover {
+    background-color: black;
+    color: white;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, auto); 
+    gap: 2rem; 
+    justify-items: center; 
+    align-items: center;
+    padding: 5vh 10vw; 
+}
+
+.services {
+    background: #2a2657;
+    color: white;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+
+>>>>>>> fac0ee35eefd85aaeecd6abe1e86555c2f91043c
 .values {
     display: flex;
     align-items: center;
@@ -572,6 +800,7 @@ header {
     opacity: 1;
   }  
 
+<<<<<<< HEAD
 /*====================================
 =         RESEÑAS DE CLIENTES        =
 ====================================*/
@@ -749,9 +978,147 @@ footer {
     padding: 1vh 2vw;
   }
   
+=======
+.social-icons {
+    color: white;
+    display: flex; 
+    gap: 1rem; 
+
+}
+
+.social-icons a {
+    font-size: 1.2rem; 
+    color: white; 
+    text-decoration: none; 
+}
+
+.reviews {
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 5vw;
+    max-width: 80vw;
+    margin: 5vh auto;
+}
+
+.reviews-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 30vw;
+}
+
+.reviews button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background: #AD7B1D;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.reviews button:hover {
+    background: #8A5E17;
+    transform: scale(1.05);
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.review:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.review-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.review-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.review-content .location {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.review-content p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* 3. Tamanos de letra generales */
+>>>>>>> fac0ee35eefd85aaeecd6abe1e86555c2f91043c
 
 
 
+
+
+
+/*SERVICES STYLES*/
+
+.servicios-header {
+    color: black;
+    text-align: center;
+    padding: 3vh 5vw; 
+    max-width: 80vw;
+    margin: 5vh auto;
+}
+
+.servicios-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.servicios-header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 800vw;
+    margin: 0 auto; 
+    line-height: 1.6;
+}
 
 
 
