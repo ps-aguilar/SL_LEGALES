@@ -86,23 +86,23 @@ body {
     transform: scale(1.2);
   }
   
-
 /*====================================
 =         BARRA SUPERIOR (TOP BAR)   =
 ====================================*/
-/* 2. Secciones principales */
+
+/* Sección principal de la barra superior */
 .top-bar {
     background: black;
     color: white;
     max-width: 100vw;
     height: 5vh; /* Altura relativa al viewport */
-    display: flex; /* Usa flexbox para organizar los elementos */
-    justify-content: space-between; /* Separa el texto e íconos */
-    align-items: center; /* Centra los elementos verticalmente */
+    display: flex; /* Flexbox para organizar elementos */
+    justify-content: space-between; /* Separación entre elementos */
+    align-items: center; /* Centrado vertical */
     padding: 0 8vw; /* Espaciado lateral relativo */
-    font-size: 1rem; /* Tamaño de letra ajustable */
-}
-
+    font-size: 1rem;
+  }
+  
 /*====================================
 =           HEADER Y NAVBAR          =
 ====================================*/
