@@ -152,7 +152,7 @@ footer {
     margin-bottom: 1vh;
     max-width: 40vw;
     padding-top: 10vh;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);   
 }
 
 .hero p {
@@ -389,9 +389,10 @@ footer {
 
 /* Fuerza Laboral */
 .team {
-    background: #13162E;
+    background: #2a2657;
     color: white;
-    height: 90vh;
+    min-height: 100vh; /* Aumentado para que cubra también los dots */
+    padding-bottom: 5vh; /* Añadido para dar espacio debajo del slider */
     margin-top: 5vh;
     display: flex;
     align-items: center;
@@ -456,20 +457,23 @@ footer {
 
 /* El texto (h3 y p) se ajusta dentro de la celda */
 .slider .cell-content h3 {
-    font-size: 1em;
-    color: black;
-    padding-left: .5em; /* Separación del texto desde la izquierda */
-    margin-top: 2em; /* Ajusté este valor para reducir la separación con la imagen */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2a2657;
+    margin: 1.2em 0 0.4em 0;
+    text-align: center;
     z-index: 2;
 }
 
 .slider .cell-content p {
-    margin-top: 0.2em; /* Reduje la separación con el h3 */
-    margin-bottom: .5em;
-    color: black;
-    text-align: justify;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    margin: 0 0 0.5em 0;
+    text-align: center;
     z-index: 2;
 }
+
 
 /* Ajuste de padding de la celda */
 .slider .cell-content {
@@ -482,6 +486,15 @@ footer {
     z-index: 1;
 }
 
+
+.flickity-page-dots .dot {
+    background: white;
+    opacity: 0.4;
+}
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 1;
+}
 .social-icons {
     color: white;
     display: flex; /* Organiza los íconos en fila */
