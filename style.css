@@ -556,28 +556,28 @@ header {
     padding: 5vh 5vw;
     background: white;
     color: black;
-}
-
-/* Columna de texto introductorio y botón */
-.reviews-text {
+  }
+  
+  /* Texto introductorio y botón */
+  .reviews-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     width: 30vw;
-}
-
-.reviews-text h2 {
+  }
+  
+  .reviews-text h2 {
     font-family: 'Libre Bodoni', serif;
     font-size: 2.5rem;
     font-weight: bold;
     color: #2a2657;
     margin-bottom: 1rem;
     position: relative;
-}
-
-/* Línea decorativa debajo del título */
-.reviews-text h2::after {
+  }
+  
+  /* Línea decorativa debajo del título */
+  .reviews-text h2::after {
     content: "";
     display: block;
     position: absolute;
@@ -587,10 +587,10 @@ header {
     height: 0.1875rem;
     background-color: #AD7B1D;
     border-radius: 0.125rem;
-}
-
-/* Botón de contacto */
-.reviews button {
+  }
+  
+  /* Botón de contacto */
+  .reviews button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -603,23 +603,23 @@ header {
     border-radius: 0.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.reviews button:hover {
+  }
+  
+  .reviews button:hover {
     background: #8A5E17;
     transform: scale(1.05);
-}
-
-/* Columna de tarjetas de reseña */
-.review-container {
+  }
+  
+  /* Contenedor de tarjetas de reseña */
+  .review-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 50%;
-}
-
-/* Tarjeta individual */
-.review {
+  }
+  
+  /* Tarjeta individual */
+  .review {
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -628,45 +628,46 @@ header {
     max-width: 37.5rem;
     box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.review:hover {
+  }
+  
+  .review:hover {
     transform: scale(1.03);
     box-shadow: 0.25rem 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
-}
-
-/* Ícono animado */
-.review-icon {
+  }
+  
+  /* Ícono de reseña */
+  .review-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 0.9375rem;
-}
-
-/* Contenido textual */
-.review-content {
+  }
+  
+  /* Contenido textual de la reseña */
+  .review-content {
     display: flex;
     flex-direction: column;
     text-align: left;
-}
-
-.review-content h3 {
+  }
+  
+  .review-content h3 {
     margin: 0;
     font-size: 1.2rem;
-}
-
-.review-content .location {
+  }
+  
+  .review-content .location {
     font-size: 0.9rem;
     font-style: italic;
     color: gray;
     margin-bottom: 0.625rem;
-}
-
-.review-content p {
+  }
+  
+  .review-content p {
     font-size: 1rem;
     font-weight: bold;
     color: #333;
-}
+  }
+  
 
 /*====================================
 =              FOOTER                =
