@@ -392,7 +392,7 @@ footer {
     background: #2a2657;
     color: white;
     min-height: 100vh; /* Aumentado para que cubra también los dots */
-    padding-bottom: 5vh; /* Añadido para dar espacio debajo del slider */
+    padding-bottom: 3vh; /* Añadido para dar espacio debajo del slider */
     margin-top: 5vh;
     display: flex;
     align-items: center;
@@ -409,11 +409,14 @@ footer {
 }
 
 .slider {
-    width: 100vw;
+    width: 100%;
+    max-width: 98vw; /* en lugar de 1400px, ocupa el 90% del ancho del viewport */
     margin: 0 auto;
-    padding: 0 20px;
-    background: transparent;
+    overflow: hidden;
+    padding: 4vh 0;  /* espacio vertical con respecto a la altura de pantalla */
+    border-radius: 0.5rem; /* relativa al tamaño de fuente base */
 }
+
 
 .slider .gallery-cell {
     width: 20vw;
@@ -488,7 +491,7 @@ footer {
 
 
 .flickity-page-dots .dot {
-    background: white;
+    background: rgb(255, 255, 255);
     opacity: 0.4;
 }
 
