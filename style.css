@@ -383,6 +383,7 @@ header {
 /*====================================
 =             MISIÓN Y VISIÓN        =
 ====================================*/
+/* Sección de valores */
 .values {
     display: flex;
     align-items: center;
@@ -394,10 +395,10 @@ header {
     max-width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
-}
-
-/* Contenedor del texto */
-.values-content {
+  }
+  
+  /* Contenedor del texto */
+  .values-content {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -406,37 +407,37 @@ header {
     text-align: left;
     gap: 1rem;
     max-width: 40rem;
-}
-
-/* Títulos */
-.values h2, .values h3 {
+  }
+  
+  /* Títulos de valores */
+  .values h2, .values h3 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-}
-
-/* Párrafos */
-.values p {
+  }
+  
+  /* Párrafos de valores */
+  .values p {
     max-width: 40rem;
     line-height: 1.6;
     text-align: justify;
-}
-
-/* Contenedor de la imagen */
-.values-img {
+  }
+  
+  /* Contenedor de la imagen */
+  .values-img {
     flex: 1;
     max-width: 40rem;
     display: flex;
-    justify-content: flex-end; /* Alinea la imagen a la derecha */
-}
-
-/* Imagen */
-.values-img img {
+    justify-content: flex-end;
+  }
+  
+  /* Imagen de valores */
+  .values-img img {
     width: 100%;
     height: auto;
     border-radius: 3px;
     object-fit: cover;
-}
-
+  }
+  
 /*====================================
 =            EQUIPO / SLIDER         =
 ====================================*/
