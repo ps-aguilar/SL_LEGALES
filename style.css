@@ -273,6 +273,7 @@ header {
 /*====================================
 =             ABOUT US               =
 ====================================*/
+
 .about_us {
     display: flex;
     align-items: center;
@@ -284,65 +285,68 @@ header {
     max-width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
-}
-
-.about_us-img {
+  }
+  
+  /* Imagen del About Us */
+  .about_us-img {
     flex: 1;
     max-width: 40rem;
-}
-
-.about_us-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centra el contenido horizontalmente */
-    justify-content: center;  /* Centra el contenido verticalmente */
-    text-align: center;  /* Centra el texto */
-    gap: .5rem;
-    max-width: 40rem;
-}
-
-.about_us img {
+  }
+  
+  .about_us img {
     width: 100%;
     height: auto;
     border-radius: 3px;
     object-fit: cover;
-}
-
-.about_us-text {
+  }
+  
+  /* Contenido del About Us */
+  .about_us-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    max-width: 40rem;
+  }
+  
+  /* Texto del About Us */
+  .about_us-text {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1vh;
-}
-
-.about_us p{
+  }
+  
+  .about_us p {
     text-align: justify;
-}
-
-button {
+  }
+  
+  /* Botón About Us */
+  .about_us button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em; /* Reduce la separación entre texto e ícono */
+    gap: 2em;
     background: transparent;
-    border: .2em solid white; /* Hace el borde más delgado */
-    border-radius: .2rem; /* Hace las esquinas más redondeadas */
+    border: 0.2em solid white;
+    border-radius: 0.2rem;
     color: white;
-    padding: .5em 2em; /* Reduce aún más el tamaño del botón */
-    font-size: .8em; /* Reduce el tamaño del texto */
+    padding: 0.5em 2em;
+    font-size: 0.8em;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
-
-button:hover {
+  }
+  
+  .about_us button:hover {
     background: white;
     color: #58568D;
-}
-
+  }  
 
 /*====================================
 =          SERVICIOS SECTION         =
