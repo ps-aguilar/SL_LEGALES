@@ -351,32 +351,34 @@ header {
 /*====================================
 =          SERVICIOS SECTION         =
 ====================================*/
+/* Contenedor principal de servicios */
 .service-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, auto); 
-    gap: 2rem; 
-    justify-items: center; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    justify-items: center;
     align-items: center;
-    padding: 5vh 10vw; 
-}
-
-.services {
+    padding: 5vh 10vw;
+  }
+  
+  /* Sección de servicios */
+  .services {
     background: #13162E;
     color: white;
     text-align: center;
     padding-top: 5vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
-
-}
-
-.service{
+  }
+  
+  /* Tarjeta individual de servicio */
+  .service {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
+  }  
 
 /*====================================
 =             MISIÓN Y VISIÓN        =
