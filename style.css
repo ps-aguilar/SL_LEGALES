@@ -183,6 +183,7 @@ header {
 /*====================================
 =           HERO SECTION             =
 ====================================*/
+
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%),
                 url(Img/original/Foto_Principal.jpg);
@@ -196,55 +197,56 @@ header {
     justify-content: center;
     height: 95vh;
     padding: 5vh 10vw;
-}
-
-.hero h1 {
+  }
+  
+  /* Título principal del hero */
+  .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1vh;
     max-width: 40vw;
     padding-top: 10vh;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);   
-}
-
-.hero p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Texto descriptivo del hero */
+  .hero p {
     font-size: 1.2rem;
     margin-bottom: 2vh;
     max-width: 30vw;
     text-align: justify;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-.hero button {
+  }
+  
+  /* Botón del hero */
+  .hero button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em; /* Reduce la separación entre texto e ícono */
+    gap: 2em;
     background: transparent;
-    border: .2em solid white; /* Hace el borde más delgado */
-    border-radius: .2rem; /* Hace las esquinas más redondeadas */
+    border: 0.2em solid white;
+    border-radius: 0.2rem;
     color: white;
-    padding: .5em 2em; /* Reduce aún más el tamaño del botón */
-    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    padding: 0.5em 2em;
+    font-size: 0.5rem;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
-
-.hero button i {
-    font-size: 1rem; /* Reduce el tamaño del icono */
-    align-items: center;
-    justify-content: center;
-    margin-top: .3em; /* Ajusta la posición del ícono */
-}
-
-
-.hero button:hover {
+  }
+  
+  /* Ícono dentro del botón */
+  .hero button i {
+    font-size: 1rem;
+    margin-top: 0.3em;
+  }
+  
+  /* Hover del botón */
+  .hero button:hover {
     background: white;
     color: #58568D;
-}
-
-
+  }
+  
 /*====================================
 =            INTRODUCTION            =
 ====================================*/
