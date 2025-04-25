@@ -5,7 +5,6 @@
 /*=========================================
 =            ESTILOS GENERALES            =
 =========================================*/
-
 /* Estilo base del body */
 body {
     font-size: 1rem; /* Tamaño base escalable */
@@ -89,7 +88,6 @@ body {
 /*====================================
 =         BARRA SUPERIOR (TOP BAR)   =
 ====================================*/
-
 /* Sección principal de la barra superior */
 .top-bar {
     background: black;
@@ -106,55 +104,55 @@ body {
 /*====================================
 =           HEADER Y NAVBAR          =
 ====================================*/
-/* Estilo del encabezado principal */
+/* Encabezado principal */
 header {
     background: rgba(41, 41, 41, 0.2); /* Fondo semitransparente */
-    color: #AD7B1D;                    /* Color de texto corporativo */
+    color: #AD7B1D; /* Color de texto corporativo */
     max-width: 100vw;
-    height: 8vh;                       /* Altura relativa al viewport */
+    height: 8vh; /* Altura relativa al viewport */
     display: flex;
-    align-items: center;              /* Centrado vertical */
-    padding: 0 2vw;                   /* Espaciado horizontal */
-}
-
-/* Contenedor de la barra de navegación */
-.navbar {
+    align-items: center;
+    padding: 0 2vw;
+  }
+  
+  /* Contenedor de navegación */
+  .navbar {
     width: 100%;
     display: flex;
-    justify-content: space-between;  /* Separa logo y menú */
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
     align-items: center;
-}
-
-/* Estilo del logo */
-.logo img {
-    height: 12vh;                     /* Escala según altura de la pantalla */
-    max-width: 100%;                  /* Asegura que no exceda su contenedor */
-}
-
-/* Lista de enlaces de navegación */
-.nav-links {
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 12vh; /* Escala adaptable */
+    max-width: 100%;
+  }
+  
+  /* Lista de enlaces */
+  .nav-links {
     display: flex;
-    gap: 2vw;                         /* Espacio entre enlaces */
+    gap: 2vw; /* Espaciado entre enlaces */
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-/* Estilo individual de los enlaces */
-.nav-links a {
+  }
+  
+  /* Estilo de los enlaces */
+  .nav-links a {
     text-decoration: none;
     color: #AD7B1D;
     font-size: 1rem;
-    position: relative; /* Necesario para el subrayado animado */
-}
-
-/* Hover más notorio */
-.nav-links a:hover {
-    color: #A61C2C; /* Rojo vino elegante */
-}
-
-/* Línea animada inferior */
-.nav-links a::after {
+    position: relative; /* Para subrayado animado */
+  }
+  
+  /* Hover de los enlaces */
+  .nav-links a:hover {
+    color: #A61C2C; /* Cambio de color elegante */
+  }
+  
+  /* Subrayado animado */
+  .nav-links a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -163,26 +161,25 @@ header {
     height: 2px;
     background-color: #A61C2C;
     transition: width 0.3s ease-in-out;
-}
-
-.nav-links a:hover::after {
+  }
+  
+  .nav-links a:hover::after {
     width: 100%;
-}
-
-/* Ícono de búsqueda */
-.search-icon {
+  }
+  
+  /* Ícono de búsqueda */
+  .search-icon {
     font-size: 1.2rem;
-    color: #AD7B1D; /* Color inicial */
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    color: #AD7B1D;
     cursor: pointer;
-}
-
-.search-icon:hover {
-    color: #A61C2C; /* Rojo vino al pasar el mouse */
-    transform: scale(1.2); /* Efecto de agrandamiento ligero */
-}
-
-
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .search-icon:hover {
+    color: #A61C2C;
+    transform: scale(1.2);
+  }
+  
 /*====================================
 =           HERO SECTION             =
 ====================================*/
