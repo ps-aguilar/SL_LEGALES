@@ -5,7 +5,6 @@
 /*=========================================
 =            ESTILOS GENERALES           =
 =========================================*/
-
 /* Estilo base del body */
 body {
     font-size: 1rem;            /* Unidad relativa para escalabilidad */
@@ -13,10 +12,6 @@ body {
     padding: 0;
     width: 100%;
 }
-
-/*=========================================
-=            TIPOGRAFÍA GLOBAL           =
-=========================================*/
 
 /* Título principal */
 h1 {
@@ -64,12 +59,50 @@ a:hover {
     color: #A61C2C;
 }
 
+/* Estilo del área principal */
+main {
+    background: white;
+    color: black;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 1vw;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #AD7B1D; /* Cambia al color corporativo dorado al pasar el mouse */
+    transform: scale(1.2); /* Efecto de leve aumento */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
 
-/*=========================================
-=            ENCABEZADO Y NAVBAR          =
-=========================================*/
+/*====================================
+=         BARRA SUPERIOR (TOP BAR)   =
+====================================*/
+/* 2. Secciones principales */
+.top-bar {
+    background: black;
+    color: white;
+    max-width: 100vw;
+    height: 5vh; /* Altura relativa al viewport */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Separa el texto e íconos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 8vw; /* Espaciado lateral relativo */
+    font-size: 1rem; /* Tamaño de letra ajustable */
+}
 
+/*====================================
+=           HEADER Y NAVBAR          =
+====================================*/
 /* Estilo del encabezado principal */
 header {
     background: rgba(41, 41, 41, 0.2); /* Fondo semitransparente */
@@ -109,93 +142,47 @@ header {
     text-decoration: none;
     color: #AD7B1D;
     font-size: 1rem;
+    position: relative; /* Necesario para el subrayado animado */
+}
+
+/* Hover más notorio */
+.nav-links a:hover {
+    color: #A61C2C; /* Rojo vino elegante */
+}
+
+/* Línea animada inferior */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #A61C2C;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Ícono de búsqueda */
 .search-icon {
-    font-size: 1.2rem;                /* Escala con fuente base */
+    font-size: 1.2rem;
+    color: #AD7B1D; /* Color inicial */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: #A61C2C; /* Rojo vino al pasar el mouse */
+    transform: scale(1.2); /* Efecto de agrandamiento ligero */
 }
 
 
-main {
-    background: white;
-    color: black;
-
-}
-
-footer {
-    background: black;
-    color: white;
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-}
-
-/* Contenedor de las columnas */
-.footer-links-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2vw;
-    max-width: 90%;
-}
-
-/* Columnas individuales */
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-    flex: 1; /* Distribuye el espacio equitativamente */
-}
-
-/* Ajuste del logo */
-.logo-container {
-    align-items: center;
-    text-align: center;
-}
-
-.footer-links img {
-    height: 15vh;
-    max-width: auto;
-}
-
-/* Footer final con derechos de autor y redes sociales */
-.footer-links-company {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 1vh 2vw;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1vw; /* Espacio entre iconos */
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.5em; /* Tamaño de los iconos */
-}
-
-
-/* 2. Secciones principales */
-.top-bar {
-    background: black;
-    color: white;
-    max-width: 100vw;
-    height: 5vh; /* Altura relativa al viewport */
-    display: flex; /* Usa flexbox para organizar los elementos */
-    justify-content: space-between; /* Separa el texto e íconos */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 0 8vw; /* Espaciado lateral relativo */
-    font-size: 1rem; /* Tamaño de letra ajustable */
-
-}
-
-
+/*====================================
+=           HERO SECTION             =
+====================================*/
 .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%),
                 url(Img/original/Foto_Principal.jpg);
@@ -257,6 +244,10 @@ footer {
     color: #58568D;
 }
 
+
+/*====================================
+=            INTRODUCTION            =
+====================================*/
 .introduction {
     text-align: center; 
     padding: 5vh 10vw; 
@@ -276,32 +267,9 @@ footer {
     line-height: 1.5; 
 }
 
-.diferenciadores {
-    display: flex;
-    justify-content: center; 
-    gap: 3vw; 
-    flex-wrap: wrap; 
-    margin-top: 3vh;
-}
-
-.diferenciador {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    max-width: 250px; 
-    text-align: center;
-}
-
-.diferenciador h3 {
-    margin-top: 1vh;
-}
-
-.diferenciador p {
-    max-width: 200px;
-}
-
-/*About us*/
-
+/*====================================
+=             ABOUT US               =
+====================================*/
 .about_us {
     display: flex;
     align-items: center;
@@ -373,7 +341,9 @@ button:hover {
 }
 
 
-/* Servicios */
+/*====================================
+=          SERVICIOS SECTION         =
+====================================*/
 .service-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -401,8 +371,9 @@ button:hover {
     gap: 1rem;
 }
 
-
-/* Misión y Visión */
+/*====================================
+=             MISIÓN Y VISIÓN        =
+====================================*/
 .values {
     display: flex;
     align-items: center;
@@ -457,7 +428,9 @@ button:hover {
     object-fit: cover;
 }
 
-/* Fuerza Laboral */
+/*====================================
+=            EQUIPO / SLIDER         =
+====================================*/
 .team {
     background: #2a2657;
     color: white;
@@ -581,10 +554,10 @@ button:hover {
     text-decoration: none; /* Elimina el subrayado */
 }
 
-/*==============================================
-=            SECCIÓN: RESEÑAS DE CLIENTES       =
-==============================================*/
 
+/*====================================
+=         RESEÑAS DE CLIENTES        =
+====================================*/
 /* Contenedor general */
 .reviews {
     display: flex;
@@ -706,6 +679,85 @@ button:hover {
     font-weight: bold;
     color: #333;
 }
+
+/*====================================
+=              FOOTER                =
+====================================*/
+/* Estilo general del pie de página */
+footer {
+    background: black;
+    color: white;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+/* Contenedor de columnas del footer */
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    max-width: 90%;
+    width: 100%;
+}
+
+/* Columnas individuales */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    flex: 1; /* Distribuye el espacio equitativamente */
+}
+
+/* Estilo del logo dentro del footer */
+.logo-container {
+    text-align: center;
+}
+
+.footer-links img {
+    height: 15vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Sección final del footer: derechos y redes */
+.footer-links-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 1vh 2vw;
+}
+
+/*====================================
+=              DIFERENCIADORES       =
+====================================*/
+.diferenciadores {
+    display: flex;
+    justify-content: center; 
+    gap: 3vw; 
+    flex-wrap: wrap; 
+    margin-top: 3vh;
+}
+
+.diferenciador {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 250px; 
+    text-align: center;
+}
+
+.diferenciador h3 {
+    margin-top: 1vh;
+}
+
+.diferenciador p {
+    max-width: 200px;
+}
+
 
 
 
