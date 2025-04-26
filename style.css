@@ -2,240 +2,307 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
-/* 1. Selectores generales */
+/*=========================================
+=            ESTILOS GENERALES            =
+=========================================*/
+/* Estilo base del body */
 body {
-    font-size: 16px;
+    font-size: 1rem; 
     margin: 0;
     padding: 0;
     width: 100%;
-}
-
-
-header {
-    background: rgba(41, 41, 41, 0.2);
-    color: #AD7B1D;
-    max-width: 100vw;
-    height: 8vh; /* Más alto que el top-bar */
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    padding: 0 2vw; /* Espaciado lateral */
-}
-
-.navbar {
-    width: 100%; /* La barra ocupa todo el espacio */
-    display: flex;
-    justify-content: space-between; /* Separa el logo del menú */
-    align-items: center;
-    
-}
-
-.logo img {
-    height: 12vh; /* Ajusta el tamaño del logo en función del viewport */
-    max-width: auto; /* Mantiene la proporción */
-}
-
-
-.nav-links {
-    display: flex; /* Organiza los enlaces en línea */
-    gap: 2vw; /* Espacio entre los enlaces */
-    list-style: none; /* Elimina los estilos de lista */
-    padding: 0;
+  }
+  
+  /* Títulos principales y secundarios */
+  h1, h2, h3, h4 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 500;
     margin: 0;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #AD7B1D;
+  }
+  
+  h1 {
+    font-family: 'Libre Bodoni', serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-family: 'Libre Bodoni', serif;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+  
+  /* Texto general */
+  p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
     font-size: 1rem;
-}
-
-.search-icon {
-    font-size: 1.2rem; /* Tamaño del ícono */
-}
-
-main {
+  }
+  
+  /* Enlaces */
+  a {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #ae7c1e;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #A61C2C;
+  }
+  
+  /* Área principal */
+  main {
     background: white;
     color: black;
-
-}
-
-footer {
-    background: black;
+  }
+  
+  /* Iconos de redes sociales */
+  .social-icons {
+    display: flex;
+    gap: 1vw;
+  }
+  
+  .social-icons a {
     color: white;
-    padding: 2vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-}
-
-/* Contenedor de las columnas */
-.footer-links-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2vw;
-    max-width: 90%;
-}
-
-/* Columnas individuales */
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-    flex: 1; /* Distribuye el espacio equitativamente */
-}
-
-/* Ajuste del logo */
-.logo-container {
-    align-items: center;
-    text-align: center;
-}
-
-.footer-links img {
-    height: 15vh;
-    max-width: auto;
-}
-
-/* Footer final con derechos de autor y redes sociales */
-.footer-links-company {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 1vh 2vw;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1vw; /* Espacio entre iconos */
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.5em; /* Tamaño de los iconos */
-}
-
-
-/* 2. Secciones principales */
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    color: #AD7B1D;
+    transform: scale(1.2);
+  }
+  
+/*====================================
+=         BARRA SUPERIOR (TOP BAR)   =
+====================================*/
+/* Sección principal de la barra superior */
 .top-bar {
     background: black;
     color: white;
     max-width: 100vw;
-    height: 5vh; /* Altura relativa al viewport */
-    display: flex; /* Usa flexbox para organizar los elementos */
-    justify-content: space-between; /* Separa el texto e íconos */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 0 8vw; /* Espaciado lateral relativo */
-    font-size: 1rem; /* Tamaño de letra ajustable */
-
-}
-
-
-.hero{
-    background: url(Img/original/Foto_Principal.jpg);
+    height: 5vh; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 8vw; 
+    font-size: 1rem;
+  }
+  
+/*====================================
+=           HEADER Y NAVBAR          =
+====================================*/
+/* Encabezado principal */
+header {
+    background: rgba(41, 41, 41, 0.2); 
+    color: #AD7B1D; 
+    max-width: 100vw;
+    height: 8vh; 
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+  }
+  
+  /* Contenedor de navegación */
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 12vh; 
+    max-width: 100%;
+  }
+  
+  /* Lista de enlaces */
+  .nav-links {
+    display: flex;
+    gap: 2vw; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo de los enlaces */
+  .nav-links a {
+    text-decoration: none;
+    color: #AD7B1D;
+    font-size: 1rem;
+    position: relative; 
+  }
+  
+  /* Hover de los enlaces */
+  .nav-links a:hover {
+    color: #A61C2C; 
+  }
+  
+  /* Subrayado animado */
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #A61C2C;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Ícono de búsqueda */
+  .search-icon {
+    font-size: 1.2rem;
+    color: #AD7B1D;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .search-icon:hover {
+    color: #A61C2C;
+    transform: scale(1.2);
+  }
+  
+/*====================================
+=           HERO SECTION             =
+====================================*/
+.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%),
+                url(Img/original/Foto_Principal.jpg);
     background-color: #6C6C7A;
-    background-size: cover; /* Ajusta la imagen para que cubra toda la sección sin distorsión */
-    background-position: center; /* Centra la imagen */
-
+    background-size: cover;
+    background-position: center;
     color: white;
     display: flex;
-    flex-direction: column; /* Organiza los elementos en columna (uno debajo del otro) */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    justify-content: center; /* Centra verticalmente */
-    height: 95vh; /* Ajusta la altura */
-    padding: 5vh 10vw; /* Espaciado relativo */
-}
-
-.hero h1 {
-    font-size: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 95vh;
+    padding: 5vh 10vw;
+  }
+  
+  /* Título principal del hero */
+  .hero h1 {
+    font-size: 3.5rem;
     margin-bottom: 1vh;
-    max-width: 40vw; /* Controla el ancho del texto */
-    padding-top: 10vh; /* Añade espacio arriba */
-}
-
-.hero p {
+    max-width: 40vw;
+    padding-top: 10vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Texto descriptivo del hero */
+  .hero p {
     font-size: 1.2rem;
     margin-bottom: 2vh;
     max-width: 30vw;
     text-align: justify;
-}
-
-.hero button {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Botón del hero */
+  .hero button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em; /* Reduce la separación entre texto e ícono */
+    gap: 2em;
     background: transparent;
-    border: .2em solid white; /* Hace el borde más delgado */
-    border-radius: .2rem; /* Hace las esquinas más redondeadas */
+    border: 0.2em solid white;
+    border-radius: 0.2rem;
     color: white;
-    padding: .5em 2em; /* Reduce aún más el tamaño del botón */
-    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    padding: 0.5em 2em;
+    font-size: 0.5rem;
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
-
-.hero button i {
-    font-size: 1rem; /* Reduce el tamaño del icono */
-    align-items: center;
-    justify-content: center;
-    margin-top: .3em; /* Ajusta la posición del ícono */
-}
-
-
-.hero button:hover {
+  }
+  
+  /* Ícono dentro del botón */
+  .hero button i {
+    font-size: 1rem;
+    margin-top: 0.3em;
+  }
+  
+  /* Hover del botón */
+  .hero button:hover {
     background: white;
     color: #58568D;
-}
-
+  }
+  
+/*====================================
+=            INTRODUCTION            =
+====================================*/
 .introduction {
-    text-align: center; 
-    padding: 5vh 10vw; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 2vh; 
-}
-
-.introduction h2 {
-    margin-bottom: 1vh;
-}
-
-.introduction p {
-    max-width: 800px; 
-    margin: 0 auto; 
-    line-height: 1.5; 
-}
-
-.diferenciadores {
-    display: flex;
-    justify-content: center; 
-    gap: 3vw; 
-    flex-wrap: wrap; 
-    margin-top: 3vh;
-}
-
-.diferenciador {
+    text-align: center;
+    padding: 5vh 10vw;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    max-width: 250px; 
+    align-items: center;
+    gap: 2vh;
+  }
+  
+  /* Título de la sección */
+  .introduction h2 {
+    margin-bottom: 1vh;
+  }
+  
+  /* Párrafo de la introducción */
+  .introduction p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /*====================================
+=              DIFERENCIADORES       =
+====================================*/
+
+/* Contenedor de diferenciadores */
+.diferenciadores {
+    display: flex;
+    justify-content: center;
+    gap: 3vw;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+  }
+  
+  /* Tarjeta individual */
+  .diferenciador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
     text-align: center;
-}
-
-.diferenciador h3 {
+  }
+  
+  .diferenciador h3 {
     margin-top: 1vh;
-}
-
-.diferenciador p {
+  }
+  
+  .diferenciador p {
     max-width: 200px;
-}
+  }
 
-/*About us*/
-
+/*====================================
+=             ABOUT US               =
+====================================*/
 .about_us {
     display: flex;
     align-items: center;
@@ -247,90 +314,105 @@ footer {
     max-width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
-}
-
-.about_us-img {
+  }
+  
+  /* Imagen del About Us */
+  .about_us-img {
     flex: 1;
     max-width: 40rem;
-}
-
-.about_us-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centra el contenido horizontalmente */
-    justify-content: center;  /* Centra el contenido verticalmente */
-    text-align: center;  /* Centra el texto */
-    gap: .5rem;
-    max-width: 40rem;
-}
-
-.about_us img {
+  }
+  
+  .about_us img {
     width: 100%;
     height: auto;
     border-radius: 3px;
     object-fit: cover;
-}
-
-.about_us-text {
+  }
+  
+  /* Contenido del About Us */
+  .about_us-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    max-width: 40rem;
+  }
+  
+  /* Texto del About Us */
+  .about_us-text {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1vh;
-}
-
-.about_us p{
+  }
+  
+  .about_us p {
     text-align: justify;
-}
-
-/*
-.about_us button {
-    padding: 8px 18px;
-    font-size: 1rem;
-    background-color: transparent;
-    border: 2px solid black;
-    color: black;
+  }
+  
+  /* Botón About Us */
+  .about_us button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    background: transparent;
+    border: 0.2em solid white;
+    border-radius: 0.2rem;
+    color: white;
+    padding: 0.5em 2em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-}
+  }
+  
+  .about_us button:hover {
+    background: white;
+    color: #58568D;
+  }  
 
-.about_us button:hover {
-    background-color: black;
-    color: white;
-}*/
-
-
-/* Servicios */
+/*====================================
+=          SERVICIOS SECTION         =
+====================================*/
+/* Contenedor principal de servicios */
 .service-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, auto); 
-    gap: 2rem; 
-    justify-items: center; 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    justify-items: center;
     align-items: center;
-    padding: 5vh 10vw; 
-}
-
-.services {
+    padding: 5vh 10vw;
+  }
+  
+  /* Sección de servicios */
+  .services {
     background: #13162E;
     color: white;
     text-align: center;
     padding-top: 5vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
-
-}
-
-.service{
+  }
+  
+  /* Tarjeta individual de servicio */
+  .service {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
+  }  
 
-
-/* Misión y Visión */
+/*====================================
+=             MISIÓN Y VISIÓN        =
+====================================*/
+/* Sección de valores */
 .values {
     display: flex;
     align-items: center;
@@ -342,314 +424,328 @@ footer {
     max-width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
-}
-
-/* Contenedor del texto */
-.values-content {
+  }
+  
+  /* Contenedor del texto */
+  .values-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Alinea el texto a la izquierda */
+    align-items: flex-start; 
     text-align: left;
     gap: 1rem;
     max-width: 40rem;
-}
-
-/* Títulos */
-.values h2, .values h3 {
+  }
+  
+  /* Títulos de valores */
+  .values h2, .values h3 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-}
-
-/* Párrafos */
-.values p {
+  }
+  
+  /* Párrafos de valores */
+  .values p {
     max-width: 40rem;
     line-height: 1.6;
     text-align: justify;
-}
-
-/* Contenedor de la imagen */
-.values-img {
+  }
+  
+  /* Contenedor de la imagen */
+  .values-img {
     flex: 1;
     max-width: 40rem;
     display: flex;
-    justify-content: flex-end; /* Alinea la imagen a la derecha */
-}
-
-/* Imagen */
-.values-img img {
+    justify-content: flex-end;
+  }
+  
+  /* Imagen de valores */
+  .values-img img {
     width: 100%;
     height: auto;
     border-radius: 3px;
     object-fit: cover;
-}
-
-/* Fuerza Laboral */
+  }
+  
+/*====================================
+=            EQUIPO / SLIDER         =
+====================================*/
+/* Sección de equipo */
 .team {
-    background: #13162E;
+    background: #2a2657;
     color: white;
-    height: 90vh;
+    min-height: 100vh;
+    padding-bottom: 3vh;
     margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.team h2 {
-    margin-bottom: .5em; ;
-}
-
-.team p {
-    margin-bottom: 2em; ;
-}
-
-.slider {
-    width: 100vw;
+  }
+  
+  .team h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .team p {
+    margin-bottom: 2em;
+  }
+  
+  /* Contenedor del slider */
+  .slider {
+    width: 100%;
+    max-width: 98vw;
     margin: 0 auto;
-    padding: 0 20px;
-    background: transparent;
-}
-
-.slider .gallery-cell {
+    overflow: hidden;
+    padding: 4vh 0;
+    border-radius: 0.5rem;
+  }
+  
+  /* Celda individual del slider */
+  .slider .gallery-cell {
     width: 20vw;
     height: 60vh;
     margin-right: 2.5em;
     background: #fff;
-    border-radius: .3em;
+    border-radius: 0.3em;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     position: relative;
-    display: flex; /* Asegura que el hover se active sobre toda la celda */
-    flex-direction: column;
-}
-
-/* Asegura que el contenido dentro de la celda se alinee correctamente */
-.slider .cell-content {
-    height: 100%;
-    padding: 1.2em;
     display: flex;
     flex-direction: column;
-    position: relative;
+  }
+  
+  /* Contenido dentro de la celda */
+  .slider .cell-content {
+    height: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    z-index: 1; /* Asegura que el contenido esté por encima de la imagen */
-}
-
-/* La imagen sigue con la propiedad absolute */
-.slider .cell-content img {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Imagen dentro de la celda */
+  .slider .cell-content img {
     width: 100%;
     height: 70%;
     background-size: cover;
     background-position: center;
-    border-radius: .3em;
+    border-radius: 0.3em;
     object-fit: cover;
     object-position: top;
     position: absolute;
     top: 0;
     left: 0;
     transition: transform 0.3s ease;
-}
-
-/* El texto (h3 y p) se ajusta dentro de la celda */
-.slider .cell-content h3 {
-    font-size: 1em;
-    color: black;
-    padding-left: .5em; /* Separación del texto desde la izquierda */
-    margin-top: 2em; /* Ajusté este valor para reducir la separación con la imagen */
+  }
+  
+  /* Título en la celda */
+  .slider .cell-content h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #2a2657;
+    margin: 1.2em 0 0.4em 0;
+    text-align: center;
     z-index: 2;
-}
-
-.slider .cell-content p {
-    margin-top: 0.2em; /* Reduje la separación con el h3 */
-    margin-bottom: .5em;
-    color: black;
-    text-align: justify;
+  }
+  
+  /* Descripción en la celda */
+  .slider .cell-content p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+    margin: 0 0 0.5em 0;
+    text-align: center;
     z-index: 2;
-}
+  }
+  
+  /* Estilos de los dots del slider */
+  .flickity-page-dots .dot {
+    background: rgb(255, 255, 255);
+    opacity: 0.4;
+  }
+  
+  .flickity-page-dots .dot.is-selected {
+    opacity: 1;
+  }  
 
-/* Ajuste de padding de la celda */
-.slider .cell-content {
-    height: 100%;
-    padding: 1em; /* Esto reduce el padding general de la celda */
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    justify-content: flex-end;
-    z-index: 1;
-}
-
-.social-icons {
-    color: white;
-    display: flex; /* Organiza los íconos en fila */
-    gap: 1rem; /* Espaciado entre íconos */
-
-}
-
-.social-icons a {
-    font-size: 1.2rem; /* Tamaño de los íconos */
-    color: white; /* Asegura que sean visibles */
-    text-decoration: none; /* Elimina el subrayado */
-}
-
+/*====================================
+=         RESEÑAS DE CLIENTES        =
+====================================*/
+/* Contenedor general */
 .reviews {
-    background: white;
-    color: black;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 5vh 5vw;
+    align-items: center;
     max-width: 80vw;
     margin: 5vh auto;
-}
-
-.reviews-text {
+    padding: 5vh 5vw;
+    background: white;
+    color: black;
+  }
+  
+  /* Texto introductorio y botón */
+  .reviews-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     width: 30vw;
-}
-
-.reviews button {
+  }
+  
+  .reviews-text h2 {
+    font-family: 'Libre Bodoni', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2a2657;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+  
+  /* Línea decorativa debajo del título */
+  .reviews-text h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 100%;
+    height: 0.1875rem;
+    background-color: #AD7B1D;
+    border-radius: 0.125rem;
+  }
+  
+  /* Botón de contacto */
+  .reviews button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 10px 20px;
+    gap: 0.5rem;
+    padding: 0.6em 1.5em;
     font-size: 1rem;
     color: white;
-    background: #AD7B1D;
+    background-color: #AD7B1D;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-.reviews button:hover {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .reviews button:hover {
     background: #8A5E17;
     transform: scale(1.05);
-}
-
-.review-container {
+  }
+  
+  /* Contenedor de tarjetas de reseña */
+  .review-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5rem;
     width: 50%;
-}
-
-.review {
+  }
+  
+  /* Tarjeta individual */
+  .review {
     display: flex;
     align-items: center;
-    background: #f7f7f7;
-    padding: 15px;
-    border-radius: 8px;
-    max-width: 600px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-}
-
-.review:hover {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #f3f1f1;
+    max-width: 37.5rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .review:hover {
     transform: scale(1.03);
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.review-icon {
+    box-shadow: 0.25rem 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Ícono de reseña */
+  .review-icon {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-right: 15px;
-}
-
-.review-content {
+    justify-content: center;
+    margin-right: 0.9375rem;
+  }
+  
+  /* Contenido textual de la reseña */
+  .review-content {
     display: flex;
     flex-direction: column;
     text-align: left;
-}
-
-.review-content h3 {
+  }
+  
+  .review-content h3 {
     margin: 0;
     font-size: 1.2rem;
-}
-
-.review-content .location {
+  }
+  
+  .review-content .location {
     font-size: 0.9rem;
     font-style: italic;
     color: gray;
-    margin-bottom: 10px;
-}
-
-.review-content p {
+    margin-bottom: 0.625rem;
+  }
+  
+  .review-content p {
     font-size: 1rem;
-    color: #333;
     font-weight: bold;
-}
+    color: #333;
+  }
+  
 
-
-/* 3. Tamanos de letra generales */
-
-h1 {
-    font-family: Libre Bodoni;
-    font-weight: 700;
-    font-size: 2.5em;
-}
-
-h2 {
-    font-family: Libre Bodoni;
-    font-weight: 500;
-    font-size: 2em;
-
-}
-
-h3 {
-    font-family: Fira Sans;
-    font-weight: 500;
-    font-size: 1.5em;
-}
-
-h4 {
-    font-family: Fira Sans;
-    font-weight: 400;
-    font-size: 1.24em;
-}
-
-p {
-    font-family: Fira Sans;
-    font-weight: 300;
-    font-size: 1em;
-}
-
-a {
-    font-family: Fira Sans;
-    font-weight: 400;
-    font-size: 1em;
-    color: #ae7c1e;
-}
-
-a:hover {
-    color: #A61C2C;
-}
-
-
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2em; /* Reduce la separación entre texto e ícono */
-    background: transparent;
-    border: .2em solid white; /* Hace el borde más delgado */
-    border-radius: .2rem; /* Hace las esquinas más redondeadas */
+/*====================================
+=              FOOTER                =
+====================================*/
+/* Pie de página general */
+footer {
+    background: black;
     color: white;
-    padding: .5em 2em; /* Reduce aún más el tamaño del botón */
-    font-size: .8em; /* Reduce el tamaño del texto */
-    text-transform: uppercase;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background: white;
-    color: #58568D;
-}
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+  
+  /* Contenedor de columnas */
+  .footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    max-width: 90%;
+    width: 100%;
+  }
+  
+  /* Columnas individuales */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    flex: 1; /* Distribución equitativa */
+  }
+  
+  /* Logo dentro del footer */
+  .logo-container {
+    text-align: center;
+  }
+  
+  .footer-links img {
+    height: 15vh;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  /* Sección final: derechos y redes */
+  .footer-links-company {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 1vh 2vw;
+  }
+  
