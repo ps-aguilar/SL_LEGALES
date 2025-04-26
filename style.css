@@ -223,13 +223,13 @@ header {
     justify-content: center;
     gap: 2em;
     background: transparent;
-    border: 0.2em solid white;
+    border: 0.3em solid white;
     border-radius: 0.2rem;
     color: white;
-    padding: 0.5em 2em;
+    padding: 0.2em 1.5em;
     font-size: 0.5rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
   }
