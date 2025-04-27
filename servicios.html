@@ -8,127 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Servicios - SLCORP</title>
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-
-        .servicios-lista {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 20px;
-            padding: 20px;
-            justify-items: center; 
-            align-items: center;  
-        }
-
-        .card-container {
-            justify-content: center;
-            align-items: center;
-            margin: 2rem auto;
-            width: 100%;
-            max-width: 280px;
-            height: 280px;
-            perspective: 1000px;
-            display: flex;
-        }
-
-        .card {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 1.5s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-container:hover .card {
-            transform: rotateY(180deg);
-        }
-
-        .front, .back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 6px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 15px;
-            box-sizing: border-box;
-        }
-
-        .front {
-            background-color: #120D46;
-            color: white;
-        }
-
-        .back {
-            background-color: #6C6D70;
-            color: white;
-            transform: rotateY(180deg);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1.5rem;
-            text-align: justify;
-        }
-
-        .front img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-
-        .front h3 {
-            font-size: 1.2rem;  
-            font-weight: 600;  
-            text-align: center; 
-            color: white; 
-            margin: 10px 0; 
-            letter-spacing: 0.5px; 
-        }
-
-        .back p {
-            font-size: 12px;
-            margin: 0 0 12px;
-            line-height: 1.5;
-            flex-grow: 1;
-        }
-
-        .btn-interesa {
-            background-color: #AD7B1D;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .btn-interesa:hover {
-            background-color: #8B5E14;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style_servicios.css">
 </head>
 <body>
-
     <!-- Barra superior con contacto y redes sociales -->
     <div class="top-bar">
         <p>Llámanos: 99 3131 3088</p>
         <p>Correo: contacto@slcorp.com.mx</p>
 
         <div class="social-icons">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/slcorpcommx/"  target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </div>
 
@@ -136,14 +28,14 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Img/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
+                <img src="Img/original/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="servicios.html" class="active">Servicios</a></li>
-                <li><a href="fuerza-laboral.html">Fuerza Laboral</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about_us.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="team.html">Fuerza Laboral</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
             <div class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -153,114 +45,114 @@
 
     <!-- Contenido principal -->
     <main class="servicios-main">
-        <section class="servicios-header">
+
+        <section class="introduction">
             <h1>Servicios</h1>
             <p>Los servicios que ofrecemos tienen un enfoque dual: preventivo y correctivo. No solo nos especializamos en la resolución de conflictos existentes, sino que también trabajamos para anticiparlos, mitigar riesgos y brindar estrategias que permitan a nuestros clientes prepararse para el futuro con seguridad y confianza.</p>
         </section>
     
         <section class="servicios-lista">
             <!-- Tarjetas fijas (15 tarjetas) -->
-    
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen1.jpg" alt="Auditoría Financiera y Control Interno">
+                        <img src="Img/royalty_free/auditoria-financiera-y-control-interino.jpg" alt="Auditoría Financiera y Control Interno">
                         <h3>Auditoría Financiera y Control Interno</h3>
                     </div>
                     <div class="back">
                         <p>Realizamos un análisis integral de los procesos administrativos para mejorar la eficiencia operativa. Asesoramos en la implementación de manuales de procedimientos y políticas internas, además de apoyar en la adopción de sistemas de gestión de calidad, prevención de riesgos y normativas ambientales, garantizando el cumplimiento y optimización de los recursos empresariales.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
-    
+            
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen2.jpg" alt="Defensa Fiscal y Administrativa">
+                        <img src="Img/royalty_free/defensa-fiscal-y-administrativa.jpg" alt="Defensa Fiscal y Administrativa">
                         <h3>Defensa Fiscal y Administrativa</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos defensa legal especializada ante sanciones y resoluciones del SAT y otras entidades fiscalizadoras, como CONAGUA, PROFECO, PROFEPA, STyPS, entre otras. Gestionamos recursos administrativos, juicios contenciosos y amparos, protegiendo los intereses de nuestros clientes y garantizando un respaldo jurídico sólido ante procedimientos administrativos y fiscales.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
-    
+            
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen3.jpg" alt="Servicios Contables y Fiscales">
+                        <img src="Img/royalty_free/servicios-contables-y-fiscales.jpg" alt="Servicios Contables y Fiscales">
                         <h3>Servicios Contables y Fiscales</h3>
                     </div>
                     <div class="back">
                         <p>Asesoramos y gestionamos el cumplimiento de obligaciones fiscales y contables para personas físicas y empresas. Atendemos auditorías fiscales, realizamos registros contables, declaraciones, inscripción ante el IMSS y análisis de operaciones para mitigar riesgos. Además, brindamos asesoría en prevención de lavado de dinero y cumplimiento normativo, garantizando estrategias eficientes y seguras.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
-    
+            
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen4.jpg" alt="Empresas Familiares">
+                        <img src="Img/royalty_free/empresas-familiares.jpg" alt="Empresas Familiares">
                         <h3>Empresas Familiares</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos asesoría especializada en la gestión y participación de los miembros de empresas familiares, asegurando un adecuado control del patrimonio empresarial. Orientamos en la toma de decisiones estratégicas para optimizar la distribución de beneficios y garantizar la continuidad del negocio.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
-    
+            
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen5.jpg" alt="Productividad Fiscal">
+                        <img src="Img/royalty_free/productividad-fiscal.jpg" alt="Productividad Fiscal">
                         <h3>Productividad Fiscal</h3>
                     </div>
                     <div class="back">
                         <p>Optimizamos estructuras fiscales para reducir el impacto tributario, aplicando estrategias dentro del marco legal nacional e internacional. Brindamos asesoría a empresas para minimizar costos en seguridad social e INFONAVIT, garantizando un cumplimiento eficiente y rentable.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
-    
+            
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen6.jpg" alt="Consultoría Fiscal y Financiera">
+                        <img src="Img/royalty_free/consultoria-fiscal-y-financiera.jpg" alt="Consultoría Fiscal y Financiera">
                         <h3>Consultoría Fiscal y Financiera</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos asesoría especializada en la interpretación y aplicación de normativas fiscales y tratados internacionales, asegurando que las operaciones comerciales de nuestros clientes cumplan con el marco legal y optimicen su rentabilidad.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
-    
+            
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen7.jpg" alt="Compliance Empresarial">
+                        <img src="Img/royalty_free/compliance-empresarial.jpg" alt="Compliance Empresarial">
                         <h3>Compliance Empresarial</h3>
                     </div>
                     <div class="back">
                         <p>Ofrecemos asesoría estratégica para el diseño e implementación de modelos normativos de prevención y gestión empresarial. Nuestro enfoque busca fortalecer la transparencia, minimizar riesgos legales y aumentar el valor de las operaciones comerciales de cada cliente.</p>
-                        <button class="btn-interesa">Me interesa</button>
-                    </div>
+                                <button class="btn-interesa" onclick="window.location.href='https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios'">Me interesa</button>
+                            </div>
                 </div>
             </div>
     
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen8.jpg" alt="Servicios Corporativos">
+                        <img src="Img/royalty_free/servicios-corporativos.jpg" alt="Servicios Corporativos">
                         <h3>Servicios Corporativos</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos asesoría especializada en la gestión y reestructuración empresarial, incluyendo aumentos y reducciones de capital, fusiones, escisiones y la conformación de holdings y grupos corporativos. Facilitamos estrategias para optimizar la estructura legal y operativa de las empresas.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -268,12 +160,12 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen9.jpg" alt="Litigio Laboral">
+                        <img src="Img/royalty_free/litigio-laboral.jpg" alt="Litigio Laboral">
                         <h3>Litigio Laboral</h3>
                     </div>
                     <div class="back">
                         <p>Ofrecemos asesoría y estrategias en la gestión de recursos humanos, garantizando el cumplimiento normativo y la correcta administración laboral. Además, brindamos defensa legal mediante representación y mediación en conflictos laborales ante las instancias correspondientes.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -281,12 +173,12 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen10.jpg" alt="Litigio en Seguridad Social">
+                        <img src="Img/royalty_free/litigio-en-seguridad-social.jpg" alt="Litigio en Seguridad Social">
                         <h3>Litigio en Seguridad Social</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos asesoría y defensa legal en contribuciones sociales, abordando impuestos sobre nómina, integración salarial y cuotas al IMSS e INFONAVIT. También gestionamos la clasificación empresarial y la revisión anual de siniestralidad para optimizar la prima del seguro de riesgos de trabajo.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -294,12 +186,12 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen11.jpg" alt="Litigio Mercantil">
+                        <img src="Img/royalty_free/litigio-mercantil.jpg" alt="Litigio Mercantil">
                         <h3>Litigio Mercantil</h3>
                     </div>
                     <div class="back">
                         <p>En SL CORP representamos a empresarios en Juicios Orales, Ejecutivos y Ordinarios Mercantiles. Además, ofrecemos redacción y negociación de contratos mercantiles y títulos de crédito, garantizando seguridad y respaldo legal en cada operación comercial.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -307,12 +199,12 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen12.jpg" alt="Litigio en Comercio Exterior y Aduanas">
+                        <img src="Img/royalty_free/litigio-en-comercio-exterior-y-aduanas.jpg" alt="Litigio en Comercio Exterior y Aduanas">
                         <h3>Litigio en Comercio Exterior y Aduanas</h3>
                     </div>
                     <div class="back">
                         <p>Asesoramos a inversionistas nacionales y extranjeros en procedimientos antidumping, cuotas compensatorias y cumplimiento de regulaciones arancelarias y no arancelarias. Además, brindamos representación legal en litigios aduaneros y apoyo en clasificación arancelaria para garantizar el cumplimiento normativo en el comercio internacional.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -320,12 +212,12 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen13.jpg" alt="Derecho Societario">
+                        <img src="Img/royalty_free/derecho-societario.jpg" alt="Derecho Societario">
                         <h3>Derecho Societario</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos asesoría en la estructuración y gestión de sociedades, incluyendo la elaboración y protocolización de Actas de Asamblea, actos traslativos de dominio, constitución, disolución y liquidación de sociedades. Además, ofrecemos servicios de emisión de copias certificadas, otorgamiento de poderes de representación legal y fe de hechos, garantizando la correcta formalización y cumplimiento normativo de las empresas.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -333,12 +225,12 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen14.jpg" alt="Amparo contra Leyes">
+                        <img src="Img/royalty_free/amparo-contra-leyes.jpg" alt="Amparo contra Leyes">
                         <h3>Amparo contra Leyes</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos asesoría y representación en juicios de amparo contra leyes, reglamentos o tratados que vulneren derechos constitucionales. Nos encargamos del análisis normativo, la estrategia legal y la presentación del caso ante los Tribunales de la Federación, asegurando la defensa de los intereses de nuestros clientes.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
             </div>
@@ -346,59 +238,71 @@
             <div class="card-container">
                 <div class="card">
                     <div class="front">
-                        <img src="imagen15.jpg" alt="Asesoría de Negocios y Financiamiento">
+                        <img src="Img/royalty_free/asesoria-de-negocios-y-financiamiento.jpg" alt="Asesoría de Negocios y Financiamiento">
                         <h3>Asesoría de Negocios y Financiamiento</h3>
                     </div>
                     <div class="back">
                         <p>Brindamos orientación estratégica en la obtención de financiamientos para capital de trabajo e inversión. Además, asesoramos en la reestructuración de pasivos financieros, optimizando los recursos y fortaleciendo la estabilidad económica de nuestros clientes.</p>
-                        <button class="btn-interesa">Me interesa</button>
+                        <button class="btn-interesa" onclick="window.open('https://api.whatsapp.com/send?phone=529931605989&text=Deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios', '_blank')">Me interesa</button>
                     </div>
                 </div>
-            </div>
-    
+            </div>     
         </section>
     </main>
-    
-    <!-- Footer -->
+
     <footer>
-        <div class="footer-links">
-            <h3>Menú</h3>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Sobre Nosotros</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="fuerza-laboral.html">Fuerza Laboral</a>
-            <a href="contacto.html">Contacto</a>
+        <div class="footer-links-container">
+            <div class="footer-links">
+                <h3>Menú</h3>
+                <a href="index.html">Inicio</a>
+                <a href="about_us.html">Sobre Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="team.html">Fuerza Laboral</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Servicios</h3>
+                <a href="ContabilidadFiscal">Contabilidad Fiscal</a>
+                <a href="NegociosyFinanciamiento">Negocios y Financiamiento</a>
+                <a href="DefensaFiscal">Defensa Fiscal</a>
+                <a href="ConsultoríaFiscal">Consultoría Fiscal</a>
+                <a href="ProductividadFiscal">Productividad Fiscal</a>
+                <a href="AuditoríayControl">Auditoría y Control</a>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Contacto</h3>
+                <p>Dirección<br>
+                    Calle Turín #206<br>
+                    Fracc. La Gloria, Centro Tabasco<br>
+                    C.P.86170
+                </p>
+                <p>Teléfono: 99 3131 3088</p>
+                <p>Correo: contacto@slcorp.com.mx</p>
+            </div>
+    
+            <div class="footer-links logo-container">
+                <img src="Img/original/Logo_Sl_Legales.png" alt="Logotipo de SL Legales"> 
+                <p>Firma que ofrece servicios altamente especializados en materia tributaria.</p>
+            </div>
         </div>
-
-        <div class="footer-links">
-            <h3>Redes Sociales</h3>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://www.instagram.com/">Instagram</a>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-        </div>
-
-        <div class="footer-links">
-            <h3>Contacto</h3>
-            <p>Llámanos: 99 3131 3088</p>
-            <p>Correo: contacto@slcorp.com.mx</p>
-        </div>
-
-        <div class="company">
-            <img src="Img/Logo_Sl_Legales.png" alt="">
-            <p>Firma que ofrece servicios altamente especializados en materia tributaria.</p>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 SLCORP. Todos los derechos reservados.</p>
-            <a href="credits.html">Créditos</a>
-
+    
+        <div class="footer-links-company">
+            <p>
+                &copy; 2025 SL CORP. Todos los derechos reservados. 
+                Sitio web desarrollado por 
+                <a href="https://www.instagram.com/acats.crafts/" target="_blank">Paola Aguilar Martínez</a> y 
+                <a href="https://www.instagram.com/victoriacbu/" target="_blank">Victoria Bracho Urdaneta</a>.
+              </p>              
+            
             <div class="social-icons">
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
