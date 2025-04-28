@@ -341,15 +341,6 @@ header {
     max-width: 40rem;
   }
   
-  /* Texto del About Us */
-  .about_us-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1vh;
-  }
-  
   .about_us p {
     text-align: justify;
   }

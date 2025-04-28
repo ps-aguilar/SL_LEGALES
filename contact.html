@@ -7,20 +7,20 @@
     <!-- Libreria de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Título de la Página</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style_contact.css">
 </head>
 <body>
-
     <!-- Barra superior con contacto y redes sociales -->
     <div class="top-bar">
         <p>Llámanos: 99 3131 3088</p>
-        <p>Correo: conctacto@slcorp.com.mx</p>
+        <p>Correo: contacto@slcorp.com.mx</p>
 
         <div class="social-icons">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/slcorpcommx/"  target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </div>
 
@@ -28,14 +28,14 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="Img/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
+                <img src="Img/original/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="about_us.html">Sobre Nosotros</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="fuerza-laboral.html">Fuerza Laboral</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="team.html">Fuerza Laboral</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
             <div class="search-icon">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -43,93 +43,133 @@
         </nav>
     </header>
 
+    <!-- Contenido principal de la página -->
+    <main>
+        <section class="introduction">
+            <h1>¡Contáctanos!</h1>
+            <div class="intro-text-container">
+                <p>¿Tienes preguntas, comentarios o necesitas asistencia? Nuestro equipo está listo para ayudarte. Escríbenos y te responderemos lo más pronto posible.</p>
+                <div style="border-left: 3px solid #AD7B1D; height: 100px;"></div>
+                <div class="info-contacto">
+                    <p><b>Dirección:</b> Calle Turín #206, Fracc. La Gloria, Centro Tabasco, C.P. 86170</p>
+                    <p><b>Teléfono:</b> 99 3131 3088</p>
+                    <p><b>Correo:</b> contacto@slcorp.com.mx</p>
+                </div>
+            </div>
+        </section>
 
-    <form action="send_email.php" method="POST">
-        <!-- Nombre -->
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-    
-        <!-- Apellido -->
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required>
-    
-        <!-- Correo electrónico -->
-        <label for="correo">Correo electrónico:</label>
-        <input type="email" id="correo" name="correo" required>
-    
-        <!-- Teléfono -->
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-    
-        <!-- Compañía -->
-        <label for="compania">Compañía:</label>
-        <input type="text" id="compania" name="compania">
-    
-        <!-- Asunto -->
-        <label for="asunto">Asunto:</label>
-        <input type="text" id="asunto" name="asunto" required>
-    
-        <!-- Mensaje -->
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-    
-        <!-- Botón de envío -->
-        <button type="submit">Enviar</button>
-      </form>
+        <div class="contact-form-section">
+            <div class="contact-form-container">
+                <form id="contactForm">
 
-      <p>Algo de texto y la direccion</p>
-      <div id="map">
-        <iframe 
-          src="https://www.google.com/maps/embed/v1/place?q=New+York+City&key=YOUR_API_KEY"
-          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen>
-        </iframe>
-      </div>
+                    <div class="column">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="Tu correo" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="compania">Compañía</label>
+                            <input type="text" id="compania" name="compania" placeholder="Nombre de tu empresa (opcional)">
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                        </div>
+                    
+                        <div class="button-wrapper">
+                            <button type="submit" class="submit-button">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>                   
+    
+        <p>Algo de texto y la dirección</p>
+        <div id="map">
+          <iframe 
+            src="https://www.google.com/maps/embed/v1/place?q=New+York+City&key=YOUR_API_KEY"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen>
+          </iframe>
+        </div>
     </main>
-
-    <!-- Footer con enlaces y datos de la empresa -->
+ 
     <footer>
-        <div class="footer-links">
-            <h3>Menú</h3>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Sobre Nosotros</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="fuerza-laboral.html">Fuerza Laboral</a>
-            <a href="contacto.html">Contacto</a>
+        <div class="footer-links-container">
+            <div class="footer-links">
+                <h3>Menú</h3>
+                <a href="index.html">Inicio</a>
+                <a href="about_us.html">Sobre Nosotros</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="team.html">Fuerza Laboral</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Servicios</h3>
+                <a href="ContabilidadFiscal">Contabilidad Fiscal</a>
+                <a href="NegociosyFinanciamiento">Negocios y Financiamiento</a>
+                <a href="DefensaFiscal">Defensa Fiscal</a>
+                <a href="ConsultoríaFiscal">Consultoría Fiscal</a>
+                <a href="ProductividadFiscal">Productividad Fiscal</a>
+                <a href="AuditoríayControl">Auditoría y Control</a>
+            </div>
+    
+            <div class="footer-links">
+                <h3>Contacto</h3>
+                <p>Dirección<br>
+                    Calle Turín #206<br>
+                    Fracc. La Gloria, Centro Tabasco<br>
+                    C.P.86170
+                </p>
+                <p>Teléfono: 99 3131 3088</p>
+                <p>Correo: contacto@slcorp.com.mx</p>
+            </div>
+    
+            <div class="footer-links logo-container">
+                <img src="Img/original/Logo_Sl_Legales.png" alt="Logotipo de SL Legales"> 
+                <p>Firma que ofrece servicios altamente especializados en materia tributaria.</p>
+            </div>
         </div>
-
-        <div class="footer-links">
-            <h3>Servicios</h3>
-            <a href="https://www.facebook.com/">Facebook</a>
-            <a href="https://www.instagram.com/">Instagram</a>
-            <a href="https://www.twitter.com/">Twitter</a>
-            <a href="https://www.linkedin.com/">LinkedIn</a>
-        </div>
-
-        <div class="footer-links">
-            <h3>Contacto</h3>
-            <p>Llámanos: 99 3131 3088</p>
-            <p>Correo:</p>
-        </div>
-
-        <div class="company">
-            <img src="Img/Logo_Sl_Legales.png" alt="">
-            <p>Firma que ofrece servicios altamente especializados en materia tributaria</p>
-        </div>
-
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Nombre de la Empresa. Todos los derechos reservados.</p>
-            <a href="example.com">Creditos</a>
-
-            <div class="soicial-icons">
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+    
+        <div class="footer-links-company">
+            <p>
+                &copy; 2025 SL CORP. Todos los derechos reservados. 
+                Sitio web desarrollado por 
+                <a href="https://www.instagram.com/acats.crafts/" target="_blank">Paola Aguilar Martínez</a> y 
+                <a href="https://www.instagram.com/victoriacbu/" target="_blank">Victoria Bracho Urdaneta</a>.
+              </p>              
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
     </footer>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
 </body>
 </html>
