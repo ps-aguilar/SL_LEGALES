@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Contacto</title>
+
+    <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet"/>
+
+
     <link rel="stylesheet" href="style_contact.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "v86P-z3Hitu8DBhd0",
+        });
+    })();
+    </script>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Barra superior con contacto y redes sociales -->
@@ -100,20 +117,15 @@
                         </div>
                     
                         <div class="button-wrapper">
-                            <button type="submit" class="submit-button">Enviar</button>
+                            <button type="submit" onclick="sendMail(event)" class="submit-button">Enviar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>                   
     
-        <p>Algo de texto y la dirección</p>
-        <div id="map">
-          <iframe 
-            src="https://www.google.com/maps/embed/v1/place?q=New+York+City&key=YOUR_API_KEY"
-            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen>
-          </iframe>
-        </div>
+        <h3 class="introduction"><i>El primer paso hacia tu solución legal comienza aquí. Conócenos en nuestra ubicación.</i></h3>
+        <div id="map"></div>
     </main>
  
     <footer>
@@ -170,5 +182,7 @@
             </div>
         </div>
     </footer>
+    <!-- MapLibre JS + your custom JS -->
+<script type="module" src="app.js"></script>
 </body>
 </html>

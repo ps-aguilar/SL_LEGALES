@@ -308,6 +308,12 @@ textarea {
   margin-top: 8vh;
 }
 
+.introduction h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+
 .intro-text-container {
   margin-top: 8vh;
   max-width: 60vw;
@@ -343,6 +349,12 @@ textarea {
   font-size: 1rem;
 }
 
+
+#map {
+  width: 90vw;
+  height: 30vh;
+  margin-bottom: 5vh;
+}
 
 /*====================================
 =              FOOTER                =
