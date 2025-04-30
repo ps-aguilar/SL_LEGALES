@@ -349,11 +349,14 @@ textarea {
   font-size: 1rem;
 }
 
-
 #map {
-  width: 90vw;
-  height: 30vh;
-  margin-bottom: 5vh;
+  height: 500px;
+  width: 90%;
+  border: 2px solid #AD7B1D;
+  border-radius: 8px;
+  margin: 20px auto;
+  display: block;
+  margin-bottom: 3rem;
 }
 
 /*====================================
