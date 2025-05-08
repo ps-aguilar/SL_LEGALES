@@ -7,9 +7,6 @@
     <!-- Libreria de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Libreria de Flickity -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
-
     <title>SL CORP</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -35,7 +32,6 @@
                   <img src="Img/original/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
                 </a>
             </div>
-
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="about_us.html">Sobre Nosotros</a></li>
@@ -43,11 +39,32 @@
                 <li><a href="team.html">Fuerza Laboral</a></li>
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
+
+    <!-- Menú móvil -->
+    <div class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about_us.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="team.html">Fuerza Laboral</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <!-- Agregamos este div para las redes sociales -->
+        <div class="mobile-social-icons">
+            <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div class="overlay"></div>
 
     <!-- Contenido principal de la página -->
     <main>
@@ -112,7 +129,7 @@
         <section class="about_us">
             <div class="about_us-img">
                 <img src="img/royalty_free/abogado-tomando-notas-caso.jpg" alt="Abogado tomando notas de un caso en su escritorio">
-            </div>
+            </div> 
         
             <div class="about_us-content">
                 <h2>Quiénes Somos</h2>
@@ -231,26 +248,23 @@
                 <div class="gallery js-flickity"
                 data-flickity-options='{ "wrapAround": false, "groupCells": true, "cellAlign": "center", "contain": true, "pageDots": true }'>
         
-                <div class="gallery-cell">
-                    <div class="cell-content">
-                      <a href="person_Dr_Lucio_Sosa.html">
-                        <img src="Img/original/Dr_Lucio_Heriberto_Sosa_Cerda.png" alt="Dr. Lucio Heriberto Sosa Cerda - Experto en Derecho Corporativo y Fiscal">
-                        <h3>Dr. Lucio Heriberto Sosa Cerda</h3>
-                      </a>
-                      <p>Experto en Derecho Corporativo y Fiscal</p>
+                    <div class="gallery-cell">
+                        <div class="cell-content">
+                            <img src="Img/original/Dr_Lucio_Heriberto_Sosa_Cerda.png" alt="Dr. Lucio Heriberto Sosa Cerda - Experto en Derecho Corporativo y Fiscal">
+                            <h3>Dr. Lucio Heriberto Sosa Cerda</h3>
+                            <p>Experto en Derecho Corporativo y Fiscal</p>
+                        </div>
                     </div>
-                  </div>                  
         
-                  <div class="gallery-cell">
-                    <div class="cell-content">
-                      <a href="person_Lic_Abdy_Lopez.html">
-                        <img src="Img/original/Lic_Abdy_Abigail_López_Montuy.png" alt="L.C.P. Abdy Abigail López Montuy - Gerente Contable/Administradora de Consultoría">
-                        <h3>L.C.P. Abdy Abigail López Montuy</h3>
-                      </a>
-                      <p>Gerente Contable/Administradora de Consultoría</p>
+                    <div class="gallery-cell">
+                        <div class="cell-content">
+                            <img src="Img/original/Lic_Abdy_Abigail_López_Montuy.png" alt="L.C.P. Abdy Abigail López Montuy - Gerente Contable/Administradora de Consultoría">
+                            <h3>L.C.P. Abdy Abigail López Montuy</h3>
+                            <p>Gerente Contable/Administradora de Consultoría</p>
+                        </div>
                     </div>
-                  </div>                  
         
+
                   <div class="gallery-cell">
                     <div class="cell-content">
                       <a href="person_Lic_Alberto_Rodriguez.html">
@@ -259,19 +273,16 @@
                       </a>
                       <p>Gerente de Auditoría Financiera</p>
                     </div>
-                  </div>                  
         
-                  <div class="gallery-cell">
-                    <div class="cell-content">
-                      <a href="person_Lic_Yair_Torres.html">
-                        <img src="Img/original/Lic_Yair_Eden_Torres_Alcazar.png" alt="Lic. Yair E. Torres Alcázar">
-                        <h3>Lic. Yair E. Torres Alcázar</h3>
-                      </a>
-                      <p>Gerente Legal/Corporativo - Asociado de Litigio Fiscal y Compliance</p>
+                    <div class="gallery-cell">
+                        <div class="cell-content">
+                            <img src="Img/original/Lic_Yair_Eden_Torres_Alcazar.PNG" alt="Lic. Yair E. Torres Alcázar">
+                            <h3>Lic. Yair E. Torres Alcázar</h3>
+                            <p>Gerente Legal/Corporativo - Asociado de Litigio Fiscal y Compliance</p>
+                        </div>
                     </div>
-                  </div>
-                  
         
+
                   <div class="gallery-cell">
                     <div class="cell-content">
                       <a href="person_Lic_Luis_Velazquez.html">
@@ -280,8 +291,8 @@
                       </a>
                       <p>Coordinador en Impuestos</p>
                     </div>
-                  </div>
         
+
                   <div class="gallery-cell">
                     <div class="cell-content">
                       <a href="person_Lic_Viviana_Del_Valle.html">
@@ -290,8 +301,8 @@
                       </a>
                       <p>Coordinadora de Recursos Humanos</p>
                     </div>
-                  </div>                  
         
+
                   <div class="gallery-cell">
                     <div class="cell-content">
                       <a href="person_Lic_Juan_Jose.html">
@@ -300,8 +311,8 @@
                       </a>
                       <p>Auxiliar Contable</p>
                     </div>
-                  </div>                  
         
+
                   <div class="gallery-cell">
                     <div class="cell-content">
                       <a href="person_Ing_Hector_Osiel.html">
@@ -323,6 +334,7 @@
                     </div>
                   </div>  
                       
+
                 </div>
             </div>
         </section>
@@ -375,7 +387,6 @@
                     
                     <!-- Contenido de la reseña -->
                     <div class="review-content">
-
                         <h3>Alejandra Resa</h3>
                         <p class="location">Villahermosa, Tabasco</p>
                         <p>Excelente servicio fiscal a las empresas ⭐️⭐️⭐️⭐️⭐️</p>
@@ -437,8 +448,13 @@
             </div>
     
             <div class="footer-links logo-container">
-                <img src="Img/original/Logo_Sl_Legales.png" alt="Logotipo de SL Legales"> 
+                <img src="Img/original/Logo_Sl_Legales.png" alt="Logotipo de SL Legales">
                 <p>Firma que ofrece servicios altamente especializados en materia tributaria.</p>
+    
+                <div class="footer-contact-mobile">
+                    <p>Teléfono: 99 3131 3088</p>
+                    <p>Correo: contacto@slcorp.com.mx</p>
+                </div>
             </div>
         </div>
     
@@ -448,8 +464,8 @@
                 Sitio web desarrollado por 
                 <a href="https://www.instagram.com/acats.crafts/" target="_blank">Paola Aguilar Martínez</a> y 
                 <a href="https://www.instagram.com/victoriacbu/" target="_blank">Victoria Bracho Urdaneta</a>.
-              </p>              
-            
+            </p>
+    
             <div class="social-icons">
                 <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
                 <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
@@ -458,6 +474,25 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.overlay');
+    
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+    
+            overlay.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
 </body>

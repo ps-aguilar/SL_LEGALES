@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Contacto</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <link rel="stylesheet" href="style_contact.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "v86P-z3Hitu8DBhd0",
+        });
+    })();
+    </script>
+
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Barra superior con contacto y redes sociales -->
@@ -29,9 +46,9 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html">
-                  <img src="Img/original/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
+                    <img src="Img/original/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
                 </a>
-            </div>              
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="about_us.html">Sobre Nosotros</a></li>
@@ -39,9 +56,6 @@
                 <li><a href="team.html">Fuerza Laboral</a></li>
                 <li><a href="contact.html">Contacto</a></li>
             </ul>
-            <div class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
         </nav>
     </header>
 
@@ -102,20 +116,15 @@
                         </div>
                     
                         <div class="button-wrapper">
-                            <button type="submit" class="submit-button">Enviar</button>
+                            <button type="submit" onclick="sendMail(event)" class="submit-button">Enviar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>                   
     
-        <p>Algo de texto y la dirección</p>
-        <div id="map">
-          <iframe 
-            src="https://www.google.com/maps/embed/v1/place?q=New+York+City&key=YOUR_API_KEY"
-            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen>
-          </iframe>
-        </div>
+        <h3 class="introduction"><i>El primer paso hacia tu solución legal comienza aquí. Conócenos en nuestra ubicación.</i></h3>
+        <div id="map"></div>
     </main>
  
     <footer>
@@ -172,5 +181,21 @@
             </div>
         </div>
     </footer>
+    <!-- MapLibre JS + your custom JS -->
+    <script>
+        const map = L.map('map').setView([17.957405, -92.932222], 18); // Lat, Lng, Zoom 18
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+      
+        // Marcador personalizado (color oro)
+        L.marker([17.957405, -92.932222], {
+          icon: L.divIcon({
+            html: '<div style="background-color: #AD7B1D; width: 24px; height: 24px; border-radius: 50%; border: 2px solid white; transform: translate(-12px, -12px);"></div>'
+          })
+        }).addTo(map)
+          .bindPopup('<b style="color: #AD7B1D;">📍 SL Servicios Corporativos</b>')
+          .openPopup();
+      </script>
 </body>
 </html>
