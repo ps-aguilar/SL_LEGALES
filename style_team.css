@@ -119,8 +119,9 @@ header {
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: flex-start; 
   align-items: center;
+  position: relative; 
 }
 
 /* Logo */
@@ -131,8 +132,12 @@ header {
 
 /* Lista de enlaces */
 .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 2vw; 
+  justify-content: center;
+  gap: 2vw;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -166,20 +171,6 @@ header {
 .nav-links a:hover::after {
   width: 100%;
 }
-
-/* Ícono de búsqueda */
-.search-icon {
-  font-size: 1.2rem;
-  color: #AD7B1D;
-  cursor: pointer;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.search-icon:hover {
-  color: #A61C2C;
-  transform: scale(1.2);
-}
-
 
 /*====================================
 =            INTRODUCTION            =

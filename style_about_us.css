@@ -106,79 +106,71 @@ body {
 ====================================*/
 /* Encabezado principal */
 header {
-    background: rgba(41, 41, 41, 0.2); 
-    color: #AD7B1D; 
-    max-width: 100vw;
-    height: 8vh; 
-    display: flex;
-    align-items: center;
-    padding: 0 2vw;
-  }
-  
-  /* Contenedor de navegación */
-  .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-  }
-  
-  /* Logo */
-  .logo img {
-    height: 12vh; 
-    max-width: 100%;
-  }
-  
-  /* Lista de enlaces */
-  .nav-links {
-    display: flex;
-    gap: 2vw; 
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilo de los enlaces */
-  .nav-links a {
-    text-decoration: none;
-    color: #AD7B1D;
-    font-size: 1rem;
-    position: relative; 
-  }
-  
-  /* Hover de los enlaces */
-  .nav-links a:hover {
-    color: #A61C2C; 
-  }
-  
-  /* Subrayado animado */
-  .nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background-color: #A61C2C;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .nav-links a:hover::after {
-    width: 100%;
-  }
-  
-  /* Ícono de búsqueda */
-  .search-icon {
-    font-size: 1.2rem;
-    color: #AD7B1D;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .search-icon:hover {
-    color: #A61C2C;
-    transform: scale(1.2);
-  }
+  background: rgba(41, 41, 41, 0.2); 
+  color: #AD7B1D; 
+  max-width: 100vw;
+  height: 8vh; 
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+}
+
+/* Contenedor de navegación */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  position: relative; 
+}
+
+/* Logo */
+.logo img {
+  height: 12vh; 
+  max-width: 100%;
+}
+
+/* Lista de enlaces */
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+  text-decoration: none;
+  color: #AD7B1D;
+  font-size: 1rem;
+  position: relative; 
+}
+
+/* Hover de los enlaces */
+.nav-links a:hover {
+  color: #A61C2C; 
+}
+
+/* Subrayado animado */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #A61C2C;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
   
 
 /*====================================
