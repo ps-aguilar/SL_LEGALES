@@ -430,8 +430,8 @@ header {
   }
   
   /* Botón About Us */
-  .about_us button {
-    display: flex;
+  .about-btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 2em;
@@ -445,9 +445,10 @@ header {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    text-decoration: none;
   }
   
-  .about_us button:hover {
+  .about-btn:hover {
     background: white;
     color: #58568D;
   }  
@@ -455,99 +456,162 @@ header {
 /*====================================
 =          SERVICIOS SECTION         =
 ====================================*/
-/* Contenedor principal de servicios */
-.service-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 2rem;
-    justify-items: center;
-    align-items: center;
-    padding: 5vh 10vw;
-  }
-  
-  /* Sección de servicios */
-  .services {
+.services {
     background: #13162E;
     color: white;
     text-align: center;
-    padding-top: 5vh;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-  }
-  
-  /* Tarjeta individual de servicio */
-  .service {
+    padding: 5vh 0;
+    margin: 10vh 0;
+}
+
+.services h2 {
+    margin-bottom: 1.5rem;
+}
+
+.services-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+    line-height: 1.6;
+}
+
+/* Contenedor de servicios - REVISADO */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem; /* Aumenté el gap */
+    padding: 0 5vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de servicio individual - REVISADO */
+.service {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-  }  
+    justify-content: flex-start; /* Alineación desde arriba */
+    gap: 1.5rem; /* Más espacio entre elementos */
+    padding: 2.5rem 2rem; /* Más padding interno */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
 
+/* Contenedor del ícono animado - NUEVO */
+.service-icon-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px; /* Altura fija para contenedor */
+    margin-bottom: 0.5rem;
+}
+
+/* Ícono animado - REVISADO */
+.service-icon {
+    height: 120px;
+    width: 120px;
+    margin: 0 auto; /* Centrado horizontal */
+    display: block; /* Elimina espacios fantasma */
+}
+
+/* Título del servicio - REVISADO */
+.service h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+    min-height: 3.5rem; /* Altura mínima para consistencia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 1.4;
+}
+
+/* Botón - REVISADO */
+.service-btn {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background: transparent;
+    border: 2px solid #AD7B1D;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.service-btn:hover {
+    background: #AD7B1D;
+    color: white;
+}
 /*====================================
 =             MISIÓN Y VISIÓN        =
 ====================================*/
-/* Sección de valores */
-.values {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4vh 4vw;
-    background: #363D57;
-    color: white;
-    gap: 5vw;
-    max-width: 80vw;
-    margin: 0 auto;
-    box-sizing: border-box;
+/* Sección de valores - Estilo base (desktop) */
+  .values {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4vh 4vw;
+      background: #363D57;
+      color: white;
+      gap: 5vw;
+      max-width: 80vw;
+      margin: 0 auto;
+      box-sizing: border-box;
   }
-  
+
   /* Contenedor del texto */
   .values-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; 
-    text-align: left;
-    gap: 1rem;
-    max-width: 40rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
+      gap: 2rem; /* Aumenté el gap para mejor separación */
+      max-width: 40rem;
   }
-  
+
   /* Títulos de valores */
-  .values h2, .values h3 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+  .values h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
   }
-  
+
   /* Párrafos de valores */
   .values p {
-    max-width: 40rem;
-    line-height: 1.6;
-    text-align: justify;
+      max-width: 40rem;
+      line-height: 1.6;
+      text-align: justify;
   }
-  
+
   /* Contenedor de la imagen */
   .values-img {
-    flex: 1;
-    max-width: 40rem;
-    display: flex;
-    justify-content: flex-end;
+      flex: 1;
+      max-width: 40rem;
+      display: flex;
+      justify-content: flex-end;
   }
-  
+
   /* Imagen de valores */
   .values-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 3px;
-    object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 3px;
+      object-fit: cover;
   }
-  
+    
 /*====================================
 =            EQUIPO / SLIDER         =
 ====================================*/
 /* Sección de equipo */
 .team {
-    background: #2a2657;
+    background: #13162E;
     color: white;
     min-height: 100vh;
     padding-bottom: 3vh;
@@ -556,6 +620,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
   }
   
   .team h2 {
@@ -1057,5 +1122,258 @@ footer {
   .hero button i {
     font-size: 0.9rem;       /* Tamaño proporcional al texto */
     margin-top: 0;           /* Elimina ajuste manual */
+  }
+
+
+  .about_us {
+    flex-direction: column;
+    max-width: 85%;
+    padding: 5vh 5vw;
+    margin: 5vh auto;
+    gap: 3vh;
+  }
+
+  .about_us-img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .about_us-content {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .about_us p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .about_us button {
+    margin-top: 1rem;
+  }  
+
+  .values {
+    flex-direction: column;
+    max-width: 85%;
+    padding: 5vh 5vw;
+    gap: 3rem; /* Más espacio entre elementos */
+  }
+  
+  .values-content {
+    order: 1; /* Primero el contenido (Misión y Visión) */
+    width: 100%;
+    align-items: center; /* Centrado en móvil */
+    gap: 2rem; /* Más espacio entre Misión y Visión */
+  }
+  
+  .values-img {
+    order: 2; /* Luego la imagen */
+    width: 100%;
+    justify-content: center; /* Centrar imagen en móvil */
+    margin-top: 1rem;
+  }
+  
+  .values h2 {
+    font-size: 1.8rem; /* Tamaño ligeramente menor para móvil */
+    text-align: center; /* Títulos centrados */
+  }
+  
+  .values p {
+    text-align: center; /* Texto centrado en móvil */
+  }
+
+  .service-container {
+      grid-template-columns: 1fr;
+      max-width: 90%;
+      gap: 2rem;
+  }
+  
+  .service-icon-container {
+      height: 100px;
+      width: 100%;
+      text-align: center; /* Esto centra elementos inline/inline-block */
+      padding-right: 3rem; /* Empuja ligeramente hacia la izquierda */
+  }
+  
+  .service-icon {
+      height: 80px;
+      width: 80px;
+      display: inline-block; /* Cambiado a inline-block */
+      vertical-align: middle; /* Alineación vertical */
+      margin: 0 auto; /* Centrado horizontal */
+  }
+  
+  /* Reset del componente animated-icons */
+  animated-icons {
+      display: inline-block !important; /* Solo necesario para override */
+      vertical-align: middle;
+  }
+  
+  .service h3 {
+      font-size: 1.2rem;
+      min-height: auto;
+      text-align: center;
+      margin-top: 0.5rem;
+  }
+
+/* Ajustes generales del contenedor */
+  .team {
+      padding: 4vh 0 6vh;
+      min-height: auto;
+  }
+  
+  /* Título principal */
+  .team h2 {
+      font-size: 1.7rem;
+      width: 70%; /* 70% del ancho (ajustable a 75% si prefieres) */
+      margin: 0 auto 0.8rem;
+      line-height: 1.3;
+      padding: 0 5%;
+  }
+  
+  /* Texto descriptivo */
+  .team p {
+      width: 80%;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0 5%;
+  }
+  
+   /* Slider en móvil */
+  .slider {
+      width: 100%;
+      max-width: 100vw;
+      padding: 3vh 0;
+  }
+  
+  /* Celda individual en móvil */
+  .slider .gallery-cell {
+      width: 80vw; /* Ocupa el 80% del viewport */
+      height: 70vh; /* Altura ajustada */
+      margin-right: 1.5rem; /* Menor espacio entre celdas */
+      margin-left: 10vw; /* Centrado manual */
+  }
+  
+  /* Contenido de la celda en móvil */
+  .slider .cell-content {
+      padding: 0.8rem;
+  }
+  
+  .slider .cell-content img {
+      height: 65%; /* Ajuste de proporción imagen/texto */
+  }
+  
+  .slider .cell-content h3 {
+      font-size: 1.1rem;
+      margin: 1rem 0 0.5rem;
+  }
+  
+  .slider .cell-content p {
+      font-size: 0.9rem;
+  }
+  
+  /* Puntos de navegación */
+  .flickity-page-dots {
+      bottom: -20px;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .flickity-page-dots .dot {
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: white;
+      opacity: 0.4;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+  }
+  
+  .flickity-page-dots .dot.is-selected {
+      opacity: 1;
+      width: 12px;
+      height: 12px;
+      background: #AD7B1D; /* Color dorado para el punto activo */
+  }
+  
+  /* Flechas de navegación (opcional - puedes mantenerlas ocultas) */
+  .flickity-button {
+      display: none;
+  }
+
+ .reviews {
+      flex-direction: column;
+      max-width: 90vw;
+      padding: 4vh 5vw;
+      margin: 3vh auto;
+  }
+  
+  /* Texto y botón centrados */
+  .reviews-text {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 3vh;
+  }
+  
+  .reviews-text h2 {
+      font-size: 2rem;
+      text-align: center;
+  }
+  
+  .reviews-text h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+  }
+  
+  .reviews-text p {
+      width: 90%;
+      margin: 1rem auto;
+      text-align: center;
+  }
+  
+  /* Botón de WhatsApp */
+  .reviews button {
+      margin: 1rem auto;
+      padding: 0.8em 2em;
+      font-size: 1.1rem;
+  }
+  
+  /* Contenedor de reseñas */
+  .review-container {
+      width: 100%;
+      gap: 2rem;
+  }
+  
+  /* Tarjetas de reseña */
+  .review {
+      flex-direction: column;
+      padding: 1.5rem;
+      text-align: center;
+      max-width: 100%;
+  }
+  
+  .review-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+  
+  .review-content {
+      text-align: center;
+  }
+  
+  .review-content h3 {
+      font-size: 1.3rem;
+  }
+  
+  .review-content .location {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+  }
+  
+  .review-content p {
+      font-size: 1.1rem;
   }
 }
