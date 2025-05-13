@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fuerza Laboral - SL CORP</title>
   <link rel="stylesheet" href="style_person.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -44,8 +45,31 @@
             <li><a href="team.html">Fuerza Laboral</a></li>
             <li><a href="contact.html">Contacto</a></li>
         </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
   </header>
+
+  <!-- Menú móvil -->
+  <div class="mobile-nav">
+      <ul class="mobile-nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about_us.html">Sobre Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="team.html">Fuerza Laboral</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+      </ul>
+      <div class="mobile-social-icons">
+          <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+  </div>
+
+  <!-- Overlay para el menú móvil -->
+  <div class="overlay"></div>
 
   <!-- Semblanza -->
   <section class="semblanza">
@@ -95,7 +119,6 @@
       <img src="Img/person/expertise_Lic_Juan.png" alt="Entorno de trabajo contable">
     </div>
   </section>
-
 
   <!-- Footer -->
   <footer>
@@ -152,6 +175,24 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+
+        menuToggle.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    });
+  </script>
 
 </body>
 </html>
