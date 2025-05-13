@@ -172,6 +172,12 @@ header {
   width: 100%;
 }
 
+/* Elementos móviles - ocultos por defecto */
+.menu-toggle,
+.mobile-nav,
+.overlay {
+    display: none;
+}
 
 /*====================================
 =               FORMS               =
@@ -401,4 +407,287 @@ footer {
     width: 90%;
     padding: 1vh 2vw;
   }
+
+  /*====================================
+=         ESTILOS PARA MÓVIL         =
+====================================*/
+@media (max-width: 768px) {
+    /* Top Bar */
+    .top-bar {
+        display: none;
+    }
+    
+    /* Header */
+    header {
+        height: 10vh;
+        padding: 0 5vw;
+        justify-content: space-between;
+        background: rgba(41, 41, 41, 0.2);
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+    
+    .logo img {
+        height: 8vh;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    /* Menú hamburguesa */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: #AD7B1D;
+        z-index: 1001;
+        margin-left: auto;
+    }
+    
+    /* Menú móvil */
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(20, 20, 20, 0.95);
+        z-index: 1000;
+        transition: right 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        padding: 20vh 5vw 5vh;
+        box-sizing: border-box;
+    }
+    
+    .mobile-nav.active {
+        right: 0;
+    }
+    
+    .mobile-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    
+    .mobile-nav-links a {
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .mobile-nav-links a:hover {
+        color: #AD7B1D;
+    }
+    
+    /* Redes sociales en menú móvil */
+    .mobile-social-icons {
+        margin-top: auto;
+        padding: 3vh 0;
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+    }
+    
+    .mobile-social-icons a {
+        color: white;
+        font-size: 1.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-social-icons a:hover {
+        color: #AD7B1D;
+        transform: scale(1.1);
+    }
+    
+    /* Overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+    
+    .overlay.active {
+        display: block;
+    }
+
+    /* Introduction */
+    .introduction {
+        padding: 5vh 5vw;
+        margin-bottom: 3vh;
+    }
+
+    .introduction h1 {
+        margin-top: 5vh;
+        font-size: 2rem;
+    }
+
+    .introduction p {
+        font-size: 1rem;
+    }
+
+    /* Footer móvil */
+    footer {
+        padding: 5vh 5vw;
+        text-align: center;
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 4vh;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-links.logo-container {
+        display: flex;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .footer-links img {
+        height: 10vh;
+        margin-bottom: 2vh;
+    }
+
+    .footer-contact-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: .5vh;
+        margin-bottom: 3vh;
+    }
+
+    .footer-links-company {
+        flex-direction: column;
+        gap: 3vh;
+        padding: 0;
+    }
+
+    .footer-links-company p {
+        order: 2;
+        font-size: 0.8rem;
+    }
+
+    .footer-links-company p a {
+        font-size: 0.8rem;
+        color: #AD7B1D;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links-company .social-icons {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 2vh;
+    }
+
+    .social-icons {
+        gap: 3vw;
+    }
+
+    .contact-form-section {
+    height: auto;
+    padding: 2rem 0;
+    margin-bottom: 4vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    }
+
+    .contact-form-container {
+      width: 80%;
+      padding: 1.5rem;
+    }
+
+    .contact-form-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 0.85rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    .button-wrapper {
+      margin-top: 1rem;
+    }
+    
+    .introduction {
+      padding: 0 5vw;
+    }
+
+    .intro-text-container {
+      max-width: 90vw;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      margin-top: 4vh;
+    }
+
+    .intro-text-container p:first-of-type {
+      text-align: center;
+      font-size: 1rem;
+      width: 100%;
+      margin-bottom: 2vh;
+    }
+
+    /* Transformamos la línea vertical en horizontal */
+    .intro-text-container > div[style*="border-left"] {
+      border-left: none !important; /* Eliminamos el borde izquierdo */
+      border-top: 3px solid #AD7B1D !important; /* Añadimos borde superior */
+      height: 3px !important; /* Reducimos la altura */
+      width: 80%; /* Ancho de la línea horizontal */
+      margin: 2vh auto; /* Centramos la línea */
+    }
+
+    .info-contacto {
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+      margin-top: 2vh;
+    }
+
+    .info-contacto p {
+      text-align: center;
+      font-size: 0.95rem;
+    }
+}
   

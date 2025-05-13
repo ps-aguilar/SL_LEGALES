@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="style_team.css">
 </head>
 <body>
-    
     <!-- Barra superior con contacto y redes sociales -->
     <div class="top-bar">
         <p>Llámanos: 99 3131 3088</p>
@@ -27,21 +26,45 @@
 
     <!-- Barra de navegación fija -->
     <header>
-      <nav class="navbar">
-          <div class="logo">
-              <a href="index.html">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
                   <img src="Img/original/Logo_Sl_Legales.png" alt="Logo Servicios Legales">
-              </a>
-          </div>
-          <ul class="nav-links">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="about_us.html">Sobre Nosotros</a></li>
-              <li><a href="servicios.html">Servicios</a></li>
-              <li><a href="team.html">Fuerza Laboral</a></li>
-              <li><a href="contact.html">Contacto</a></li>
-          </ul>
-      </nav>
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about_us.html">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="team.html">Fuerza Laboral</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
+
+    <!-- Menú móvil -->
+    <div class="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about_us.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="team.html">Fuerza Laboral</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+        <!-- Agregamos este div para las redes sociales -->
+        <div class="mobile-social-icons">
+            <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div class="overlay"></div>
 
     <!-- Contenido principal de la página -->
     <main>
@@ -128,6 +151,7 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-links-container">
             <div class="footer-links">
@@ -138,7 +162,7 @@
                 <a href="team.html">Fuerza Laboral</a>
                 <a href="contact.html">Contacto</a>
             </div>
-    
+            
             <div class="footer-links">
                 <h3>Servicios</h3>
                 <a href="ContabilidadFiscal">Contabilidad Fiscal</a>
@@ -148,7 +172,7 @@
                 <a href="ProductividadFiscal">Productividad Fiscal</a>
                 <a href="AuditoríayControl">Auditoría y Control</a>
             </div>
-    
+            
             <div class="footer-links">
                 <h3>Contacto</h3>
                 <p>Dirección<br>
@@ -159,28 +183,51 @@
                 <p>Teléfono: 99 3131 3088</p>
                 <p>Correo: contacto@slcorp.com.mx</p>
             </div>
-    
+            
             <div class="footer-links logo-container">
-                <img src="Img/original/Logo_Sl_Legales.png" alt="Logotipo de SL Legales"> 
-                <p>Firma que ofrece servicios altamente especializados en materia tributaria.</p>
+                <img src="Img/original/Logo_Sl_Legales_Blanco.png" alt="Logotipo de SL Legales">
+                
+                <div class="footer-contact-mobile">
+                    <p>Teléfono: 99 3131 3088</p>
+                    <p>Correo: contacto@slcorp.com.mx</p>
+                </div>
             </div>
         </div>
-    
+
         <div class="footer-links-company">
-            <p>
-                &copy; 2025 SL CORP. Todos los derechos reservados. 
-                Sitio web desarrollado por 
-                <a href="https://www.instagram.com/acats.crafts/" target="_blank">Paola Aguilar Martínez</a> y 
-                <a href="https://www.instagram.com/victoriacbu/" target="_blank">Victoria Bracho Urdaneta</a>.
-              </p>              
-            
             <div class="social-icons">
                 <a href="https://www.facebook.com/slcorp.com.mx/" target="_blank" rel="noopener"><i class="fa-brands fa-square-facebook"></i></a>
                 <a href="https://www.instagram.com/slcorpcommx/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/sl-servicios-corporativos" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://x.com/slcorpcommx" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
+            
+            <p>
+                &copy; 2025 SL CORP. Todos los derechos reservados. 
+                Sitio web desarrollado por 
+                <a href="https://www.instagram.com/acats.crafts/" target="_blank">Paola Aguilar Martínez</a> y 
+                <a href="https://www.instagram.com/victoriacbu/" target="_blank">Victoria Bracho Urdaneta</a>.
+            </p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript para el menú móvil
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.overlay');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+            
+            overlay.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
