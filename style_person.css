@@ -170,6 +170,12 @@ header {
 .nav-links a:hover::after {
   width: 100%;
 }
+/* Elementos móviles - ocultos por defecto */
+.menu-toggle,
+.mobile-nav,
+.overlay {
+    display: none;
+}
 
  /*===============================
 =           SEMBLANZA           =
@@ -526,3 +532,301 @@ footer {
     width: 90%;
     padding: 1vh 2vw;
   }
+
+  /*====================================
+=         ESTILOS PARA MÓVIL         =
+====================================*/
+@media (max-width: 768px) {
+  /* Top Bar - Ocultar en móvil */
+  .top-bar {
+    display: none;
+  }
+
+  /* Header - Ajustes para móvil */
+  header {
+    height: 10vh;
+    padding: 0 5vw;
+    justify-content: space-between;
+    background: rgba(41, 41, 41, 0.2);
+  }
+  .top-bar {
+    display: none;
+    }
+  
+    /* Header */
+    header {
+      height: 10vh;
+      padding: 0 5vw;
+      justify-content: space-between;
+      background: rgba(41, 41, 41, 0.2);
+    }
+  
+    .navbar {
+      justify-content: space-between;
+    }
+  
+    .logo img {
+      height: 8vh;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+  
+    /* Menú hamburguesa */
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 1.8rem;
+      color: #AD7B1D;
+      z-index: 1001;
+      margin-left: auto;
+  }
+  
+  /* Menú móvil */
+  .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(20, 20, 20, 0.95);
+      z-index: 1000;
+      transition: right 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      padding: 20vh 5vw 5vh;
+      box-sizing: border-box;
+  }
+  
+  .mobile-nav.active {
+      right: 0;
+  }
+  
+  .mobile-nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+  }
+  
+  .mobile-nav-links a {
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  .mobile-nav-links a:hover {
+      color: #AD7B1D;
+  }
+  
+  /* Redes sociales en menú móvil */
+  .mobile-social-icons {
+      margin-top: auto;
+      padding: 3vh 0;
+      display: flex;
+      justify-content: center;
+      gap: 5vw;
+  }
+  
+  .mobile-social-icons a {
+      color: white;
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+  }
+  
+  .mobile-social-icons a:hover {
+      color: #AD7B1D;
+      transform: scale(1.1);
+  }
+  
+  /* Overlay */
+  .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      display: none;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 8vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .semblanza {
+    flex-direction: column;
+    padding: 5vh 5vw;
+    gap: 3vh;
+  }
+
+  .semblanza-img {
+    width: 80%;  /* Asegura que la imagen ocupe todo el ancho disponible */
+    max-width: 100%;
+    margin-bottom: 3vh;
+    object-fit: cover;  /* Mantener la relación de aspecto sin distorsionar la imagen */
+  }
+
+  .semblanza-content {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px; /* Agregar un poco de espaciado interno */
+  }
+
+  .semblanza h2 {
+    font-size: 1.6rem; /* Reducción del tamaño del texto para que sea más legible en pantallas pequeñas */
+    text-align: center;
+    margin-bottom: 1vh;
+  }
+
+  .semblanza p {
+    font-size: 1rem; /* Reducción de tamaño de texto */
+    line-height: 1.6;
+    margin-bottom: 2vh;
+  }
+
+  .semblanza button {
+    align-self: center;
+    margin-top: 2vh;
+  }
+
+  .experiencia {
+    padding: 5vh 5vw;
+  }
+
+  .experiencia h1 {
+    font-size: 1.8rem; /* Reducción del tamaño del título para pantallas pequeñas */
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centrar el título para mejorar la presentación */
+  }
+
+  .experiencia p {
+    font-size: 1rem; /* Mantener el tamaño legible del texto */
+    line-height: 1.6; /* Mejorar la legibilidad con un buen interlineado */
+    text-align: justify; /* Alineación justificada para un texto más limpio */
+    margin-bottom: 2vh; /* Separar los párrafos para que no se vean apretados */
+    padding: 0 5px; /* Espaciado a los lados para evitar que el texto toque los bordes */
+  }
+
+  .expertise {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw;
+    gap: 3vh;
+  }
+
+  .expertise-content {
+    max-width: 100%;
+    text-align: center; /* Aseguramos que el contenido se centre */
+    align-items: center;
+  }
+
+  .expertise h2 {
+    font-size: 1.8rem; /* Reducir el tamaño del título para pantallas pequeñas */
+    text-align: center;
+    margin-bottom: 1.5rem; /* Espaciado para mejorar la separación */
+  }
+
+  .expertise p {
+    font-size: 1rem; /* Mantener un tamaño de texto adecuado para legibilidad */
+    line-height: 1.6; /* Mejorar el interlineado para mayor claridad */
+    text-align: justify; /* Justificar el texto para una mejor distribución */
+    margin-bottom: 2vh; /* Espacio entre párrafos para mayor separación */
+  }
+
+  .expertise-img {
+    max-width: 50%; /* Aumentar el tamaño de la imagen en pantallas móviles */
+    margin-top: 3vh;
+  }
+
+  /* Premios - Ajuste para móvil */
+  .premios {
+    padding: 5vh 5vw;
+  }
+
+  .premios h2 {
+    font-size: 1.8rem; /* Reduzco el tamaño del título para mejor ajuste */
+    margin-bottom: 1rem; /* Ajusto el margen inferior */
+    text-align: center; /* Aseguramos que el título esté centrado */
+  }
+
+  .premios-grid {
+    display: flex;
+    flex-direction: column; /* Las tarjetas se apilarán verticalmente */
+    align-items: center; /* Alineación centrada */
+    gap: 3vh; /* Añadí espacio entre las tarjetas */
+  }
+
+  .premio-card {
+    width: 90%; /* Las tarjetas ocupan más espacio en la pantalla */
+    max-width: 20rem; /* Limito el tamaño máximo de las tarjetas */
+    text-align: center; /* Centrar el texto dentro de cada tarjeta */
+  }
+
+  /* Footer - Ajuste para móvil */
+  footer {
+    padding: 5vh 5vw;
+    text-align: center;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-links.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+  }
+
+  .footer-links img {
+    height: 10vh;
+    margin-bottom: 2vh;
+  }
+
+  .footer-links-company {
+    flex-direction: column;
+    gap: 3vh;
+    padding: 0;
+  }
+
+  .footer-links-company p {
+    order: 2;
+    font-size: 0.8rem;
+  }
+
+  .footer-links-company p a {
+    font-size: 0.8rem;
+    color: #AD7B1D;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links-company .social-icons {
+    order: 1;
+    justify-content: center;
+    margin-bottom: 2vh;
+  }
+
+  .social-icons {
+    gap: 3vw;
+  }
+}
