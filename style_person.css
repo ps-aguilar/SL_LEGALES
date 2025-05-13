@@ -170,6 +170,12 @@ header {
 .nav-links a:hover::after {
   width: 100%;
 }
+/* Elementos móviles - ocultos por defecto */
+.menu-toggle,
+.mobile-nav,
+.overlay {
+    display: none;
+}
 
  /*===============================
 =           SEMBLANZA           =
@@ -317,6 +323,8 @@ header {
   text-align: justify;
 }
 
+
+
 /*===============================
 =           EXPERTISE           =
 ===============================*/
@@ -384,14 +392,14 @@ header {
 .expertise-img:hover img {
   transform: scale(1.05);
 }
-  
+
+
 /*===============================
 =            PREMIOS            =
 ===============================*/
 .premios {
   padding: 6vh 2vw 10vh;
   text-align: center;
-  background: #f9f9f9;
 }
 
 .premios h2 {
@@ -526,3 +534,304 @@ footer {
     width: 90%;
     padding: 1vh 2vw;
   }
+
+ /*====================================
+=         ESTILOS PARA MÓVIL         =
+====================================*/
+@media (max-width: 768px) {
+  /* Top Bar - Ocultar en móvil */
+  .top-bar {
+    display: none;
+  }
+
+  /* Header */
+  header {
+    height: 10vh;
+    padding: 0 5vw;
+    justify-content: space-between;
+    background: rgba(41, 41, 41, 0.2);
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 8vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Menú hamburguesa */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #AD7B1D;
+    z-index: 1001;
+    margin-left: auto;
+  }
+
+  /* Menú móvil */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20vh 5vw 5vh;
+    box-sizing: border-box;
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .mobile-nav-links a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-links a:hover {
+    color: #AD7B1D;
+  }
+
+  /* Redes sociales en menú móvil */
+  .mobile-social-icons {
+    margin-top: auto;
+    padding: 3vh 0;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+  }
+
+  .mobile-social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-social-icons a:hover {
+    color: #AD7B1D;
+    transform: scale(1.1);
+  }
+
+  /* Overlay */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+
+  /* Semblanza */
+  .semblanza {
+    flex-direction: column;
+    padding: 5vh 5vw;
+    gap: 3vh;
+  }
+
+  .semblanza-img {
+    width: 80%;
+    max-width: 100%;
+    margin-bottom: 3vh;
+    object-fit: cover;
+  }
+
+  .semblanza-content {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .semblanza h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1vh;
+  }
+
+  .semblanza p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2vh;
+  }
+
+  .semblanza button {
+    align-self: center;
+    margin-top: 2vh;
+  }
+
+  /* Experiencia */
+  .experiencia {
+    padding: 5vh 5vw;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 3vh auto;
+    text-align: center;
+  }
+
+  .experiencia h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .experiencia p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 2vh;
+    width: 100%;
+  }
+
+  /* Expertise */
+  .expertise {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw;
+    gap: 3vh;
+    width: 75%;
+    align-items: center;
+    background: #5a3e0c;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 3vh auto;
+    text-align: center;
+  }
+
+  .expertise h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .expertise-content {
+    width: 100%;
+  }
+
+  .expertise p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 2vh;
+    width: 100%;
+  }
+
+  .expertise-img img {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* Premios */
+  .premios {
+    padding: 5vh 5vw;
+  }
+
+  .premios h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .premios-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+  }
+
+  .premio-card {
+    width: 90%;
+    max-width: 20rem;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+
+  /* Footer */
+  footer {
+    padding: 5vh 5vw;
+    text-align: center;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-links.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+  }
+
+  .footer-links img {
+    height: 10vh;
+    margin-bottom: 2vh;
+  }
+
+  .footer-links-company {
+    flex-direction: column;
+    gap: 3vh;
+    padding: 0;
+  }
+
+  .footer-links-company p {
+    order: 2;
+    font-size: 0.8rem;
+  }
+
+  .footer-links-company p a {
+    font-size: 0.8rem;
+    color: #AD7B1D;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links-company .social-icons {
+    order: 1;
+    justify-content: center;
+    margin-bottom: 2vh;
+  }
+
+  .social-icons {
+    gap: 3vw;
+  }
+}

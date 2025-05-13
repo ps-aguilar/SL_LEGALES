@@ -171,7 +171,93 @@ header {
 .nav-links a:hover::after {
   width: 100%;
 }
-  
+
+/* Elementos móviles - BASE */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #AD7B1D;
+    z-index: 1001;
+    margin-left: auto;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.95);
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20vh 5vw 5vh;
+    box-sizing: border-box;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.mobile-nav-links a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+    color: #AD7B1D;
+}
+
+.mobile-social-icons {
+    margin-top: auto;
+    padding: 3vh 0;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.mobile-social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.mobile-social-icons a:hover {
+    color: #AD7B1D;
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
 
 /*====================================
 =            INTRODUCTION            =
@@ -298,10 +384,14 @@ header {
 }
 
 .back p {
-    font-size: 12px;
-    margin: 0 0 12px;
-    line-height: 1.5;
-    flex-grow: 1;
+  font-size: 10px; 
+  margin: 0 0 12px;
+  line-height: 1.4; 
+  flex-grow: 1;
+  overflow: hidden; 
+  display: -webkit-box;
+  -webkit-line-clamp: 8; 
+  -webkit-box-orient: vertical;
 }
 
 .btn-interesa {
@@ -313,6 +403,8 @@ header {
     border-radius: 4px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin-top: 10px;
+    align-self: center; 
 }
 
 .btn-interesa:hover {
@@ -370,4 +462,115 @@ footer {
     padding: 1vh 2vw;
   }
 
+  /*====================================
+=         ESTILOS PARA MÓVIL         =
+====================================*/
+@media (max-width: 768px) {
+  /* Header */
+  .top-bar {
+    display: none;
+}
+
+/* Header */
+header {
+    height: 10vh;
+    padding: 0 5vw;
+    justify-content: space-between;
+}
+
+  .navbar {
+      justify-content: space-between;
+  }
+
+  .logo img {
+      height: 8vh;
+  }
+
+  .nav-links {
+      display: none;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
   
+  .servicios-lista {
+      grid-template-columns: 1fr;
+      padding: 10px;
+  }
+  
+  .card-container {
+      max-width: 90%;
+      height: 250px;
+  }
+  
+  .introduction h1 {
+      margin-top: 5vh;
+      font-size: 2rem;
+  }
+  
+  .introduction {
+      padding: 3vh 5vw;
+  }
+  
+  /* Footer móvil */
+  footer {
+      padding: 5vh 5vw;
+      text-align: center;
+  }
+
+  .footer-links-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 4vh;
+  }
+
+  .footer-links {
+      display: none;
+  }
+
+  .footer-links.logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1vh;
+  }
+
+  .footer-links img {
+      height: 10vh;
+      margin-bottom: 2vh;
+  }
+
+  .footer-contact-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: .5vh;
+      margin-bottom: 3vh;
+  }
+
+  .footer-links-company {
+      flex-direction: column;
+      gap: 3vh;
+      padding: 0;
+  }
+
+  .footer-links-company p {
+      order: 2;
+      font-size: 0.8rem;
+  }
+
+  .footer-links-company p a {
+      font-size: 0.8rem;
+      color: #AD7B1D;
+      transition: color 0.3s ease;
+  }
+
+  .footer-links-company .social-icons {
+      order: 1;
+      justify-content: center;
+      margin-bottom: 2vh;
+  }
+
+  .social-icons {
+      gap: 3vw;
+  }
+}
